@@ -9,41 +9,43 @@ import org.apache.commons.dbutils.handlers.ScalarHandler;
 import java.sql.SQLException;
 import java.util.List;
 
+// Database access object
 abstract public class BaseDao {
-    private QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
+    private final QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
 
     //添加、修改、删除
-    public int update(String sql,Object... args)  {
+    public int update(String sql, Object... args) {
         int num = 0;
         try {
-            num = queryRunner.update(sql,args);
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            num = queryRunner.update(sql, args);
+        } catch (SQLException throwable) {
+            throwable.printStackTrace();
         }
         return num;
     }
 
     //查询单个，返回对象
-    public <T> T queryForOne(String sql, Class<T> type, Object... args)  {
+    public <T> T queryForOne(String sql, Class<T> type, Object... args) {
         try {
-            return queryRunner.query(sql,new BeanHandler<T>(type),args);
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            return queryRunner.query(sql, new BeanHandler<>(type), args);
+        } catch (SQLException throwable) {
+            throwable.printStackTrace();
         }
         return null;
     }
 
     //查询多个，返回List集合对象
-    public <T> List<T> queryForList(String sql,Class<T> type, Object... args){
+    public <T> List<T> queryForList(String sql, Class<T> type, Object... args) {
         try {
-            return queryRunner.query(sql,new BeanListHandler<T>(type),args);
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+            return queryRunner.query(sql, new BeanListHandler<>(type), args);
+        } catch (SQLException throwable) {
+            throwable.printStackTrace();
         }
+        
         return null;
     }
 
-    public Object queryForSingleValue(String sql, Object... args){
+    public Object queryForSingleValue(String sql, Object... args) {
         try {
             return queryRunner.query(sql, new ScalarHandler(), args);
         } catch (SQLException e) {

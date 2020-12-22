@@ -5,7 +5,7 @@ public class User {
     private String username;
     private String password;
     private String email;
-    private String creatime;
+    private String creatTime;
 
     public int getId() {
         return id;
@@ -39,12 +39,12 @@ public class User {
         this.email = email;
     }
 
-    public String getCreatime() {
-        return creatime;
+    public String getCreatTime() {
+        return creatTime;
     }
 
-    public void setCreatime(String creatime) {
-        this.creatime = creatime;
+    public void setCreatTime(String creatTime) {
+        this.creatTime = creatTime;
     }
 
     @Override
@@ -54,7 +54,7 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
-                ", creatime='" + creatime + '\'' +
+                ", creatime='" + creatTime + '\'' +
                 '}';
     }
 }

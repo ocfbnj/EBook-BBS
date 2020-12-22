@@ -6,13 +6,14 @@ import cn.ocfbnj.ebookbbs.pro.User;
 import cn.ocfbnj.ebookbbs.service.UserService;
 
 public class UserServiceImpl implements UserService {
-    private UserDao userDao = new UserDaoImpl();
+    private final UserDao userDao = new UserDaoImpl();
+
     @Override
-    public boolean registUser(User user) {
-       int num = userDao.saveUser(user);
-       if (num > 0)
-           return true;
-       return false;
+    public boolean registerUser(User user) {
+        int num = userDao.saveUser(user);
+        if (num > 0)
+            return true;
+        return false;
     }
 
     @Override
@@ -22,7 +23,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean existsUsername(String username) {
-        if(userDao.queryUserByUsername(username)==null){
+        if (userDao.queryUserByUsername(username) == null) {
             return false;
         }
         return true;
