@@ -1,0 +1,83 @@
+.paginator-full {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.paginator-full .page-prev,
+.paginator-full .page-next {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 40px;
+    height: 30px;
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer
+}
+
+.paginator-full .page-prev .icon-direction,
+.paginator-full .page-next .icon-direction {
+    vertical-align: middle
+}
+
+.paginator-full .page-prev .icon-direction path,
+.paginator-full .page-next .icon-direction path {
+    /*fill: var(--blueBlack)*/
+}
+
+.paginator-full .page-prev:hover,
+.paginator-full .page-next:hover {
+    background: #389eac
+}
+
+.paginator-full .page-prev:hover .icon-direction path,
+.paginator-full .page-next:hover .icon-direction path {
+    fill: #fff
+}
+
+.paginator-full .page-prev.disabled,
+.paginator-full .page-next.disabled {
+    /*background: var(--gray50);*/
+    cursor: default
+}
+
+.paginator-full .page-prev.disabled .icon-direction path,
+.paginator-full .page-next.disabled .icon-direction path {
+    /*fill: var(--gray)*/
+}
+
+.paginator-full .page-prev {
+    margin-right: 15px
+}
+
+.paginator-full .page-next {
+    margin-left: 15px
+}
+
+.paginator-full li {
+    display: inline-block
+}
+
+.paginator-full .page {
+    display: block;
+    margin: 0 3px;
+    padding: 0 12px;
+    border-radius: 2px;
+    /*color: var(--grayBlack)*/
+}
+
+.paginator-full .page:hover,
+.paginator-full .page.active {
+    background: #389eac;
+    color: #fff
+}
+
+.paginator-full .page.active {
+    cursor: default
+}
