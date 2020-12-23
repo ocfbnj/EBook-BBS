@@ -1,0 +1,3601 @@
+article, main, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, button, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse
+}
+
+img, fieldset {
+    border: none
+}
+
+address, caption, cite, code, dfn, em, strong, th {
+    font-weight: normal;
+    font-style: normal
+}
+
+ol, ul {
+    list-style: none
+}
+
+th, caption {
+    text-align: left
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote {
+    word-wrap: break-word
+}
+
+q:before, q:after {
+    content: ''
+}
+
+a:hover, a:active {
+    outline: none
+}
+
+img {
+    max-width: 100%;
+    border: none;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic
+}
+
+fieldset {
+    min-inline-size: auto
+}
+
+input {
+    vertical-align: middle
+}
+
+input, button, textarea {
+    outline: none;
+    font-size: 12px;
+    resize: none
+}
+
+input, button {
+    *overflow: visible;
+    line-height: normal
+}
+
+input::-moz-focus-inner, button::-moz-focus-inner {
+    padding: 0;
+    border: none
+}
+
+button, input[type='button'], input[type='reset'], input[type='submit'] {
+    cursor: pointer;
+    -webkit-appearance: button
+}
+
+input[type='search'] {
+    box-sizing: content-box;
+    -webkit-appearance: textfield
+}
+
+input[type='search']::-webkit-search-decoration, input[type='search']::-webkit-search-cancel-button {
+    -webkit-appearance: none
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-Italic'), local('Georgia Italic')
+}
+
+@font-face {
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-BoldItalic'), local('Georgia Bold Italic')
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'doucoin';
+    src: url('https://img3.doubanio.com/f/ark/02188c4d0d6163cc8134121eb83ca603ec1c3772/pics/iconic/doucoin.woff') format('woff'), url('https://img3.doubanio.com/f/ark/d17548bdbd9e34caae4b3ecae79b3052dd442b27/pics/iconic/doucoin.ttf') format('truetype'), url('https://img3.doubanio.com/f/ark/01b5d034dc5c1f86a63d3a3cf5f37f6f6cc6e8bb/pics/iconic/doucoin.svg') format('svg')
+}
+
+[data-icon]:before {
+    content: attr(data-icon);
+    text-transform: none;
+    font-weight: normal;
+    font-variant: normal;
+    font-family: 'arkicons';
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.purchase-dialog .bill-info::after, .purchase-dialog .payment-amounts::before, .purchase-dialog .payment-amounts .total::after, .purchase-dialog .payment-amounts .insufficient-amount::after, .purchase-dialog .balance-deposit::after, .purchase-dialog .payment-channels::before {
+    position: absolute;
+    content: ''
+}
+
+body {
+    color: #333;
+    font: 12px/1.5 'Helvetica Neue', Helvetica, 'Lucida Grande', 'Luxi Sans', Arial, 'PingFang SC', 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'Wenquanyi Micro Hei', 'WenQuanYi Micro Hei Mono', 'WenQuanYi Zen Hei', 'WenQuanYi Zen Hei Mono', LiGothicMed;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+h1, h2, h3 {
+    font-weight: bold
+}
+
+a {
+    text-decoration: none
+}
+
+p {
+    margin-bottom: 10px
+}
+
+b, em {
+    font-weight: bold
+}
+
+i {
+    font-style: italic
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+    content: ''
+}
+
+ul, ol {
+    font-size: 0
+}
+
+ul li, ol li {
+    font-size: 12px
+}
+
+a, a:hover {
+    color: #825d5b
+}
+
+a:hover {
+    background-color: #825d5b;
+    color: #fff
+}
+
+h1, h2, h3 {
+    color: #333
+}
+
+h1 {
+    font-size: 20px
+}
+
+h2 {
+    font-size: 16px
+}
+
+h3 {
+    font-size: 14px
+}
+
+.text-bold {
+    font-weight: bold
+}
+
+.list li {
+    display: block;
+    margin-bottom: 3px
+}
+
+.list-lined li {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ddd
+}
+
+.list-col li {
+    display: inline-block;
+    vertical-align: top
+}
+
+.list-col2 {
+    margin-right: -30px
+}
+
+.list-col2 li {
+    margin: 0 30px 20px 0;
+    width: 297px
+}
+
+.list-col5 {
+    margin-right: -43px
+}
+
+.list-col5 li {
+    margin: 0 43px 15px 0;
+    width: 90px;
+    text-align: center
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-Italic'), local('Georgia Italic')
+}
+
+@font-face {
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-BoldItalic'), local('Georgia Bold Italic')
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'doucoin';
+    src: url('https://img3.doubanio.com/f/ark/02188c4d0d6163cc8134121eb83ca603ec1c3772/pics/iconic/doucoin.woff') format('woff'), url('https://img3.doubanio.com/f/ark/d17548bdbd9e34caae4b3ecae79b3052dd442b27/pics/iconic/doucoin.ttf') format('truetype'), url('https://img3.doubanio.com/f/ark/01b5d034dc5c1f86a63d3a3cf5f37f6f6cc6e8bb/pics/iconic/doucoin.svg') format('svg')
+}
+
+[data-icon]:before {
+    content: attr(data-icon);
+    text-transform: none;
+    font-weight: normal;
+    font-variant: normal;
+    font-family: 'arkicons';
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.purchase-dialog .bill-info::after, .purchase-dialog .payment-amounts::before, .purchase-dialog .payment-amounts .total::after, .purchase-dialog .payment-amounts .insufficient-amount::after, .purchase-dialog .balance-deposit::after, .purchase-dialog .payment-channels::before {
+    position: absolute;
+    content: ''
+}
+
+.col1 {
+    width: 48px
+}
+
+.col2 {
+    width: 120px
+}
+
+.col3 {
+    width: 192px
+}
+
+.col4 {
+    width: 264px
+}
+
+.col5 {
+    width: 336px
+}
+
+.col6 {
+    width: 408px
+}
+
+.col7 {
+    width: 480px
+}
+
+.col8 {
+    width: 552px
+}
+
+.col9 {
+    width: 624px
+}
+
+.col10 {
+    width: 696px
+}
+
+.col11 {
+    width: 768px
+}
+
+.col12 {
+    width: 840px
+}
+
+.col13 {
+    width: 912px
+}
+
+.col14 {
+    width: 984px
+}
+
+.col15 {
+    width: 1056px
+}
+
+.col16 {
+    width: 1128px
+}
+
+.hd:after, .main:after {
+    display: block;
+    clear: both;
+    content: ''
+}
+
+.col {
+    float: left
+}
+
+.main .col:last-child {
+    float: right
+}
+
+section {
+    margin-bottom: 20px
+}
+
+.col-media .cm-left {
+    float: left
+}
+
+.col-media .cm-right {
+    float: right
+}
+
+.col-media .cm-body {
+    overflow: hidden;
+    zoom: 1
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-Italic'), local('Georgia Italic')
+}
+
+@font-face {
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-BoldItalic'), local('Georgia Bold Italic')
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'doucoin';
+    src: url('https://img3.doubanio.com/f/ark/02188c4d0d6163cc8134121eb83ca603ec1c3772/pics/iconic/doucoin.woff') format('woff'), url('https://img3.doubanio.com/f/ark/d17548bdbd9e34caae4b3ecae79b3052dd442b27/pics/iconic/doucoin.ttf') format('truetype'), url('https://img3.doubanio.com/f/ark/01b5d034dc5c1f86a63d3a3cf5f37f6f6cc6e8bb/pics/iconic/doucoin.svg') format('svg')
+}
+
+[data-icon]:before {
+    content: attr(data-icon);
+    text-transform: none;
+    font-weight: normal;
+    font-variant: normal;
+    font-family: 'arkicons';
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.purchase-dialog .bill-info::after, .purchase-dialog .payment-amounts::before, .purchase-dialog .payment-amounts .total::after, .purchase-dialog .payment-amounts .insufficient-amount::after, .purchase-dialog .balance-deposit::after, .purchase-dialog .payment-channels::before {
+    position: absolute;
+    content: ''
+}
+
+.btn, .btn:hover {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 4px 12px;
+    border: 1px solid;
+    border-radius: 2px;
+    background-color: #825d5b;
+    color: #fff;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: inherit;
+    line-height: 1.1;
+    cursor: pointer
+}
+
+.btn:hover {
+    border-color: #825f5e;
+    background-color: #825f5e
+}
+
+.btn-info, .btn-info:hover {
+    border-color: #d3d3cc;
+    background-color: #edede3;
+    color: #825d5b
+}
+
+.btn-info:hover {
+    background-color: #dbdbd4
+}
+
+.btn-sample {
+    border-color: #999995;
+    background-color: #999995
+}
+
+.btn-sample:hover {
+    border-color: #b2b2ae;
+    background-color: #b2b2ae
+}
+
+.btn-minor {
+    border-color: #ebebe5;
+    background-color: #ebebe5;
+    color: #888
+}
+
+.btn-minor:hover {
+    border-color: #f5f5ef;
+    background-color: #f5f5ef;
+    color: #888
+}
+
+.btn-read {
+    border-color: #6e839a;
+    background-color: #6e839a
+}
+
+.btn-read:hover {
+    border-color: #7a8ea3;
+    background-color: #7a8ea3
+}
+
+.btn-green, .btn-green:hover {
+    border-color: #67a88f;
+    background-color: #67a88f
+}
+
+.btn-hollow, .btn-hollow:hover {
+    border-color:;
+    background-color: transparent;
+    color: #955351
+}
+
+.btn-hollow:hover {
+    background-color: #fbf8f8
+}
+
+.btn-disabled, .btn-disabled:hover {
+    padding: 4px 12px;
+    border-color: #ddd;
+    background-color: #eee;
+    color: #aaa;
+    cursor: not-allowed
+}
+
+.btn-large, .btn-large:hover {
+    padding: 6px 14px
+}
+
+.btn-huge, .btn-huge:hover {
+    padding: 10px 40px;
+    font-size: 16px
+}
+
+input.btn-link, button.btn-link {
+    display: inline;
+    padding: 1px 0;
+    border: none;
+    background: none;
+    color: #825d5b;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 1
+}
+
+input.btn-link:hover, button.btn-link:hover {
+    background: #825d5b;
+    color: #fff
+}
+
+@-moz-document url-prefix() {
+    input.btn, input.btn:hover {
+        padding: 3px 12px
+    }
+}
+
+.nav:after, .items-minor:after {
+    display: table;
+    clear: both;
+    content: ''
+}
+
+.nav {
+    padding: 9px 0 10px;
+    border-top: 1px solid #eee;
+    background-color: #f6f6f1
+}
+
+.nav .inner {
+    margin: 0 auto
+}
+
+.items {
+    float: left
+}
+
+.items li {
+    display: inline-block;
+    margin-right: 30px;
+    color: #4b4b4b;
+    font-size: 13px;
+    line-height: 1
+}
+
+.items a {
+    padding: 3px 6px
+}
+
+.items a {
+    display: block
+}
+
+.items .on a, .items .on a:hover {
+    background: #aaa;
+    color: #fff
+}
+
+.items-minor {
+    float: right;
+    margin-top: 6px;
+    line-height: 1
+}
+
+.items-minor a {
+    display: inline;
+    padding: 0;
+    line-height: 1
+}
+
+.items-minor li {
+    display: inline;
+    margin-right: 10px;
+    white-space: nowrap;
+    font-size: 12px
+}
+
+.items-minor li:first-child:before {
+    margin: 0;
+    content: ''
+}
+
+.items-minor li:before {
+    margin-right: 10px;
+    color: #adada9;
+    content: '|'
+}
+
+.items-minor li:last-child {
+    margin-right: 0
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-Italic'), local('Georgia Italic')
+}
+
+@font-face {
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-BoldItalic'), local('Georgia Bold Italic')
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'doucoin';
+    src: url('https://img3.doubanio.com/f/ark/02188c4d0d6163cc8134121eb83ca603ec1c3772/pics/iconic/doucoin.woff') format('woff'), url('https://img3.doubanio.com/f/ark/d17548bdbd9e34caae4b3ecae79b3052dd442b27/pics/iconic/doucoin.ttf') format('truetype'), url('https://img3.doubanio.com/f/ark/01b5d034dc5c1f86a63d3a3cf5f37f6f6cc6e8bb/pics/iconic/doucoin.svg') format('svg')
+}
+
+[data-icon]:before {
+    content: attr(data-icon);
+    text-transform: none;
+    font-weight: normal;
+    font-variant: normal;
+    font-family: 'arkicons';
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.purchase-dialog .bill-info::after, .purchase-dialog .payment-amounts::before, .purchase-dialog .payment-amounts .total::after, .purchase-dialog .payment-amounts .insufficient-amount::after, .purchase-dialog .balance-deposit::after, .purchase-dialog .payment-channels::before {
+    position: absolute;
+    content: ''
+}
+
+table {
+    max-width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    background-color: transparent
+}
+
+.table {
+    margin-bottom: 18px;
+    width: 100%
+}
+
+.table th, .table td {
+    padding: 8px;
+    border-top: 1px solid #ddd;
+    vertical-align: middle;
+    text-align: left;
+    line-height: 18px
+}
+
+.table th {
+    font-weight: bold;
+    font-size: 13px
+}
+
+.table thead th {
+    vertical-align: bottom
+}
+
+.table caption + thead tr:first-child th, .table caption + thead tr:first-child td, .table colgroup + thead tr:first-child th, .table colgroup + thead tr:first-child td, .table thead:first-child tr:first-child th, .table thead:first-child tr:first-child td {
+    border-top: 0
+}
+
+.table tbody + tbody {
+    border-top: 2px solid #ddd
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+    border-collapse: separate;
+    *border-collapse: collapsed;
+    border-left: 0;
+    border-radius: 4px
+}
+
+.table-bordered th, .table-bordered td {
+    border-left: 1px solid #ddd
+}
+
+.table-bordered caption + thead tr:first-child th, .table-bordered caption + tbody tr:first-child th, .table-bordered caption + tbody tr:first-child td, .table-bordered colgroup + thead tr:first-child th, .table-bordered colgroup + tbody tr:first-child th, .table-bordered colgroup + tbody tr:first-child td, .table-bordered thead:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child td {
+    border-top: 0
+}
+
+.table-bordered thead:first-child tr:first-child th:first-child, .table-bordered tbody:first-child tr:first-child td:first-child {
+    border-top-left-radius: 4px
+}
+
+.table-bordered thead:first-child tr:first-child th:last-child, .table-bordered tbody:first-child tr:first-child td:last-child {
+    border-top-right-radius: 4px
+}
+
+.table-bordered thead:last-child tr:last-child th:first-child, .table-bordered tbody:last-child tr:last-child td:first-child {
+    border-radius: 0 0 0 4px;
+    border-bottom-left-radius: 4px
+}
+
+.table-bordered thead:last-child tr:last-child th:last-child, .table-bordered tbody:last-child tr:last-child td:last-child {
+    border-bottom-right-radius: 4px
+}
+
+.table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
+    background-color: #e6e6dd
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-Italic'), local('Georgia Italic')
+}
+
+@font-face {
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-BoldItalic'), local('Georgia Bold Italic')
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'doucoin';
+    src: url('https://img3.doubanio.com/f/ark/02188c4d0d6163cc8134121eb83ca603ec1c3772/pics/iconic/doucoin.woff') format('woff'), url('https://img3.doubanio.com/f/ark/d17548bdbd9e34caae4b3ecae79b3052dd442b27/pics/iconic/doucoin.ttf') format('truetype'), url('https://img3.doubanio.com/f/ark/01b5d034dc5c1f86a63d3a3cf5f37f6f6cc6e8bb/pics/iconic/doucoin.svg') format('svg')
+}
+
+[data-icon]:before {
+    content: attr(data-icon);
+    text-transform: none;
+    font-weight: normal;
+    font-variant: normal;
+    font-family: 'arkicons';
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.purchase-dialog .bill-info::after, .purchase-dialog .payment-amounts::before, .purchase-dialog .payment-amounts .total::after, .purchase-dialog .payment-amounts .insufficient-amount::after, .purchase-dialog .balance-deposit::after, .purchase-dialog .payment-channels::before {
+    position: absolute;
+    content: ''
+}
+
+label, input, button, select, textarea {
+    font-size: 13px;
+    font-family: inherit;
+    line-height: 1.5
+}
+
+input, button, select, textarea {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+textarea, input[type='text'], input[type='password'], input[type='datetime'], input[type='datetime-local'], input[type='date'], input[type='month'], input[type='time'], input[type='week'], input[type='number'], input[type='email'], input[type='url'], input[type='search'], input[type='tel'], input[type='color'] {
+    display: inline-block;
+    padding: 4px;
+    height: 20px;
+    border: 1px solid #ccc;
+    line-height: 19px
+}
+
+textarea.focused, input[type='text'].focused, input[type='password'].focused, input[type='datetime'].focused, input[type='datetime-local'].focused, input[type='date'].focused, input[type='month'].focused, input[type='time'].focused, input[type='week'].focused, input[type='number'].focused, input[type='email'].focused, input[type='url'].focused, input[type='search'].focused, input[type='tel'].focused, input[type='color'].focused, textarea:focus, input[type='text']:focus, input[type='password']:focus, input[type='datetime']:focus, input[type='datetime-local']:focus, input[type='date']:focus, input[type='month']:focus, input[type='time']:focus, input[type='week']:focus, input[type='number']:focus, input[type='email']:focus, input[type='url']:focus, input[type='search']:focus, input[type='tel']:focus, input[type='color']:focus {
+    outline: none;
+    border-color: #aaa
+}
+
+textarea.error, input[type='text'].error, input[type='password'].error, input[type='datetime'].error, input[type='datetime-local'].error, input[type='date'].error, input[type='month'].error, input[type='time'].error, input[type='week'].error, input[type='number'].error, input[type='email'].error, input[type='url'].error, input[type='search'].error, input[type='tel'].error, input[type='color'].error {
+    border-color: #b85f5f;
+    border-right-width: 2px
+}
+
+textarea {
+    height: auto
+}
+
+.field-group {
+    margin-bottom: 10px
+}
+
+.field-group:last-child {
+    margin-bottom: 0
+}
+
+.field-label {
+    color: #333;
+    font-size: 14px
+}
+
+select, input[type='file'] {
+    height: 28px;
+    line-height: 28px
+}
+
+input[type='file'] {
+    line-height: 18px
+}
+
+select {
+    border: 1px solid #ccc
+}
+
+input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
+    border: 1px solid #ddd;
+    background-color: #eee;
+    color: #aaa
+}
+
+input[disabled], select[disabled], textarea[disabled] {
+    cursor: not-allowed
+}
+
+input[readonly], select[readonly], textarea[readonly] {
+    background-color: #f7f7f7;
+    color: #999;
+    cursor: text
+}
+
+input[type='radio'], input[type='checkbox'] {
+    margin: 3px 0;
+    line-height: normal
+}
+
+.radio, .checkbox {
+    display: inline-block;
+    margin: 7px 15px 0 0;
+    color: #666
+}
+
+.radio input[type='radio'], .checkbox input[type='checkbox'] {
+    float: left;
+    margin-right: 5px;
+    padding: 0
+}
+
+.help-block {
+    margin: 5px 0 0;
+    color: #999
+}
+
+.help-block:empty {
+    margin: 0
+}
+
+.help-inline {
+    display: inline-block;
+    padding-left: 8px;
+    color: #999;
+    vertical-align: middle;
+    white-space: nowrap
+}
+
+.max-length-hint-msg.is-exceeded {
+    color: #fa595f
+}
+
+.max-length-hint-msg.help-block {
+    text-align: right
+}
+
+.max-length-hint-msg.help-block.is-exceeded {
+    text-align: left
+}
+
+.max-length-hint-msg.help-inline {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: -61px;
+    width: 45px;
+    text-align: right
+}
+
+.max-length-hint-msg.help-inline.is-exceeded {
+    margin-left: 0;
+    width: auto;
+    text-align: left
+}
+
+.error {
+    color: #b85f5f
+}
+
+.form-actions button {
+    margin-right: 5px
+}
+
+.fields-inline input {
+    margin-right: 5px
+}
+
+.form-horizontal .field-group:after {
+    display: table;
+    clear: both;
+    content: ''
+}
+
+.form-horizontal .field-label {
+    float: left;
+    margin-top: 3px;
+    padding-left: 5px;
+    width: 95px;
+    text-align: right
+}
+
+.form-horizontal .fields, .form-horizontal .fields-inline {
+    margin-left: 120px
+}
+
+.form-horizontal .form-actions {
+    margin: 10px 0 0 120px
+}
+
+.form-vertical .form-actions {
+    padding-top: 8px
+}
+
+.form-vertical .field-label {
+    display: block;
+    margin-bottom: 3px
+}
+
+.multi-input .radio {
+    display: block
+}
+
+.multi-input input {
+    margin-bottom: 8px
+}
+
+.multi-input .help-inline {
+    margin-top: -8px
+}
+
+.pagination {
+    padding-top: 25px
+}
+
+.pagination ul {
+    text-align: center
+}
+
+.pagination li {
+    display: inline;
+    margin: 0 4px;
+    color: #aaa;
+    font-size: 14px
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 2px 5px;
+    color: #389eac;
+    line-height: 1
+}
+
+.pagination a:hover {
+    background-color: transparent;
+    color: #108899
+}
+
+.pagination .active {
+    background-color: #389eac;
+    color: #fff;
+    cursor: default
+}
+
+.pagination .prev {
+    margin-right: 15px
+}
+
+.pagination .next {
+    margin-left: 15px
+}
+
+.alert {
+    padding: 12px 12px 12px 35px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #f2f2f2;
+    background: #f2f2f2 url('https://img3.doubanio.com/f/ark/5b87a8502e6322c55188b4e356a46d98fc9d3566/pics/icon-alert.png') no-repeat 10px center;
+    color: #863434
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-Italic'), local('Georgia Italic')
+}
+
+@font-face {
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-BoldItalic'), local('Georgia Bold Italic')
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'doucoin';
+    src: url('https://img3.doubanio.com/f/ark/02188c4d0d6163cc8134121eb83ca603ec1c3772/pics/iconic/doucoin.woff') format('woff'), url('https://img3.doubanio.com/f/ark/d17548bdbd9e34caae4b3ecae79b3052dd442b27/pics/iconic/doucoin.ttf') format('truetype'), url('https://img3.doubanio.com/f/ark/01b5d034dc5c1f86a63d3a3cf5f37f6f6cc6e8bb/pics/iconic/doucoin.svg') format('svg')
+}
+
+[data-icon]:before {
+    content: attr(data-icon);
+    text-transform: none;
+    font-weight: normal;
+    font-variant: normal;
+    font-family: 'arkicons';
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.purchase-dialog .bill-info::after, .purchase-dialog .payment-amounts::before, .purchase-dialog .payment-amounts .total::after, .purchase-dialog .payment-amounts .insufficient-amount::after, .purchase-dialog .balance-deposit::after, .purchase-dialog .payment-channels::before {
+    position: absolute;
+    content: ''
+}
+
+.stars-context, .stars-small-context {
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 4px;
+    width: 96px;
+    height: 18px;
+    background: url('https://img3.doubanio.com/f/ark/925192e039b50124f22499548a6c05847d00ffa1/pics/rating-stars.png') no-repeat;
+    vertical-align: -5px
+}
+
+.stars-, .stars-null, .stars-0 {
+    background-position: 0 -110px
+}
+
+.stars-1 {
+    background-position: 0 -88px
+}
+
+.stars-2 {
+    background-position: 0 -66px
+}
+
+.stars-3 {
+    background-position: 0 -44px
+}
+
+.stars-4 {
+    background-position: 0 -22px
+}
+
+.stars-5 {
+    background-position: 0 0
+}
+
+.stars-small-context {
+    margin-left: 5px;
+    width: 75px;
+    background-image: url('https://img3.doubanio.com/f/ark/ca4e07f99799a6c11629a58d15dd13ce076750af/pics/rating-stars-small.png');
+    *vertical-align: -2px
+}
+
+.stars-small-0 {
+    background-position: 0 -99px
+}
+
+.stars-small-1 {
+    background-position: 0 -79px
+}
+
+.stars-small-2 {
+    background-position: 0 -59px
+}
+
+.stars-small-3 {
+    background-position: 0 -38px
+}
+
+.stars-small-4 {
+    background-position: 0 -18px
+}
+
+.stars-small-5 {
+    background-position: 0 1px
+}
+
+.rating-status {
+    margin-top: 30px
+}
+
+.rating-status .rating-stars {
+    vertical-align: middle
+}
+
+.rating-status .rating-num {
+    display: inline-block;
+    padding-left: 5px;
+    color: #825d5b;
+    vertical-align: top;
+    font-size: 14px
+}
+
+.rating-stat {
+    margin-top: 20px
+}
+
+.rating-stat .item {
+    margin-bottom: 5px;
+    color: #111;
+    font-size: 0
+}
+
+.rating-stat .item .rank-name, .rating-stat .item .bar, .rating-stat .item .rank-rate, .rating-stat .item .rating-stars {
+    vertical-align: middle
+}
+
+.rating-stat .item .rating-stars {
+    margin-top: 1px
+}
+
+.rating-stat .item .rank-name {
+    color: #666;
+    font-size: 12px
+}
+
+.rating-stat .item .bar {
+    margin: 0 8px 0 2px
+}
+
+.rating-stat .item .rank-rate {
+    color: #111;
+    font-size: 12px
+}
+
+.bar-chart .bar {
+    display: inline-block;
+    height: 15px;
+    background-color: #825d5b
+}
+
+.star-region {
+    float: left;
+    opacity: 0;
+    cursor: pointer
+}
+
+.stars-context .star-region {
+    width: 19px;
+    height: 18px
+}
+
+.stars-small-context .star-region {
+    margin-right: 2px;
+    width: 13px;
+    height: 13px;
+    -moz-appearance: none
+}
+
+.rating .label {
+    margin-right: 5px
+}
+
+.stars-int-context, .stars-int-context .stars-active {
+    width: 60px;
+    height: 10px;
+    background-image: url('https://img3.doubanio.com/f/ark/7c2e49ff7aa179deaa65249e89dd09ce63f98d83/pics/mod/rating-stars.png');
+    background-position: left -10px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 1
+}
+
+@media (min--moz-device-pixel-ratio: 1.3),(-o-min-device-pixel-ratio: 2.6/2),(-webkit-min-device-pixel-ratio: 1.3),(min-device-pixel-ratio: 1.3),(min-resolution: 1.3dppx) {
+    .stars-int-context, .stars-int-context .stars-active {
+        background-image: url('https://img3.doubanio.com/f/ark/284bd7836bd61d2cf565fb46ecd98f0f1f0ed2f4/pics/mod/rating-stars@2x.png');
+        background-size: 58px 20px
+    }
+}
+
+.stars-int-context {
+    position: relative;
+    margin-top: 3px;
+    vertical-align: top;
+    text-align: left;
+    white-space: nowrap
+}
+
+.stars-int-context .star-region {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    z-index: 10;
+    margin: 0 2px 0 0;
+    vertical-align: top;
+    opacity: 0;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+.stars-int-context .stars-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-position: 0 0
+}
+
+.stars-int-context.stars-int- .stars-active, .stars-int-context.stars-int-0 .stars-active, .stars-int-context.stars-int-null .stars-active {
+    display: none
+}
+
+.stars-int-context.stars-int-1 .stars-active {
+    width: 10px
+}
+
+.stars-int-context.stars-int-2 .stars-active {
+    width: 22px
+}
+
+.stars-int-context.stars-int-3 .stars-active {
+    width: 34px
+}
+
+.stars-int-context.stars-int-4 .stars-active {
+    width: 46px
+}
+
+.stars-int-context.stars-int-5 .stars-active {
+    width: 58px
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-Italic'), local('Georgia Italic')
+}
+
+@font-face {
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-BoldItalic'), local('Georgia Bold Italic')
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'doucoin';
+    src: url('https://img3.doubanio.com/f/ark/02188c4d0d6163cc8134121eb83ca603ec1c3772/pics/iconic/doucoin.woff') format('woff'), url('https://img3.doubanio.com/f/ark/d17548bdbd9e34caae4b3ecae79b3052dd442b27/pics/iconic/doucoin.ttf') format('truetype'), url('https://img3.doubanio.com/f/ark/01b5d034dc5c1f86a63d3a3cf5f37f6f6cc6e8bb/pics/iconic/doucoin.svg') format('svg')
+}
+
+[data-icon]:before {
+    content: attr(data-icon);
+    text-transform: none;
+    font-weight: normal;
+    font-variant: normal;
+    font-family: 'arkicons';
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.purchase-dialog .bill-info::after, .purchase-dialog .payment-amounts::before, .purchase-dialog .payment-amounts .total::after, .purchase-dialog .payment-amounts .insufficient-amount::after, .purchase-dialog .balance-deposit::after, .purchase-dialog .payment-channels::before {
+    position: absolute;
+    content: ''
+}
+
+.ark-overlay body {
+    overflow: hidden !important;
+    width: 100%;
+    height: 100%
+}
+
+#ark-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 798;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    white-space: nowrap
+}
+
+#ark-overlay.hide {
+    overflow-y: hidden;
+    opacity: 0;
+    pointer-events: none
+}
+
+.k-stick, .k-content {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.k-stick {
+    overflow: hidden;
+    margin-right: -.31em;
+    width: 1px;
+    height: 100%
+}
+
+.k-content {
+    margin: 20px auto;
+    max-width: 100%;
+    background: #fff;
+    text-align: left;
+    text-align: left
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-Italic'), local('Georgia Italic')
+}
+
+@font-face {
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-BoldItalic'), local('Georgia Bold Italic')
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'doucoin';
+    src: url('https://img3.doubanio.com/f/ark/02188c4d0d6163cc8134121eb83ca603ec1c3772/pics/iconic/doucoin.woff') format('woff'), url('https://img3.doubanio.com/f/ark/d17548bdbd9e34caae4b3ecae79b3052dd442b27/pics/iconic/doucoin.ttf') format('truetype'), url('https://img3.doubanio.com/f/ark/01b5d034dc5c1f86a63d3a3cf5f37f6f6cc6e8bb/pics/iconic/doucoin.svg') format('svg')
+}
+
+[data-icon]:before {
+    content: attr(data-icon);
+    text-transform: none;
+    font-weight: normal;
+    font-variant: normal;
+    font-family: 'arkicons';
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.purchase-dialog .bill-info::after, .purchase-dialog .payment-amounts::before, .purchase-dialog .payment-amounts .total::after, .purchase-dialog .payment-amounts .insufficient-amount::after, .purchase-dialog .balance-deposit::after, .purchase-dialog .payment-channels::before {
+    position: absolute;
+    content: ''
+}
+
+.dialog-hd {
+    position: relative;
+    padding: 12px 20px;
+    background: #834e4e;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1
+}
+
+.dialog-hd .k-title {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 96%;
+    font-weight: bold
+}
+
+.dialog-hd .k-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    color: #fff
+}
+
+.dialog-bd {
+    padding: 20px;
+    background: #fffff9
+}
+
+.k-text {
+    margin-bottom: 10px;
+    color: #333;
+    white-space: normal;
+    font-size: 12px;
+    line-height: 1.5
+}
+
+.k-content {
+    box-shadow: 0 0 15px #222
+}
+
+.k-buttons {
+    text-align: right
+}
+
+.k-buttons .btn {
+    margin-left: 6px
+}
+
+.dialog-ft {
+    padding: 10px 20px;
+    background: #e4e4de;
+    color: #333;
+    font-size: 12px
+}
+
+.dialog-ft .checkbox {
+    overflow: hidden;
+    vertical-align: top;
+    line-height: 1.4;
+    cursor: pointer
+}
+
+.dialog-ft .checkbox input[type='checkbox'] {
+    margin-right: 5px
+}
+
+body {
+    background: #fffff9
+}
+
+.link {
+    border: none;
+    background-color: transparent;
+    cursor: pointer
+}
+
+.link, .link:hover, a, a:hover {
+    text-decoration: none
+}
+
+.link, a {
+    color: #825d5b
+}
+
+.link:hover, a:hover {
+    background-color: #825d5b;
+    color: #fff
+}
+
+header, footer {
+    width: 100%
+}
+
+header {
+    margin-bottom: 30px;
+    padding-top: 21px;
+    background: #f6f6f1
+}
+
+.main, header .inner, footer .inner {
+    margin: 0 auto;
+    width: 936px
+}
+
+.main h2 {
+    margin-bottom: 5px;
+    font-size: 23px
+}
+
+.main p {
+    font-size: 14px;
+    line-height: 1.8
+}
+
+.menu:after, .content:after, .main:after, .inner:after {
+    display: block;
+    clear: both;
+    height: 0;
+    content: '\0020'
+}
+
+.warning {
+    color: #333
+}
+
+section .hd {
+    position: relative
+}
+
+footer {
+    clear: both;
+    overflow: hidden;
+    padding: 10px 0
+}
+
+footer img {
+    max-width: none \9
+}
+
+footer .inner {
+    position: relative;
+    padding: 10px 0 0;
+    border-top: 1px solid #e7e7dc
+}
+
+footer .copyright {
+    float: left
+}
+
+footer .ft-nav {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    white-space: nowrap
+}
+
+footer .ft-nav a {
+    margin: 0 3px
+}
+
+.on a:hover, .on a {
+    background-color: #825d5b;
+    color: #fff
+}
+
+.pic:hover {
+    background: none
+}
+
+.user-info .guide-for-user-profile:after, .user-info .guide-for-user-profile:before {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-color: rgba(255, 255, 255, 0);
+    content: ' '
+}
+
+.more-items {
+    position: absolute;
+    top: 32px;
+    right: 10px;
+    z-index: 200;
+    display: none;
+    padding: 10px 0;
+    min-width: 150px;
+    border: 1px solid var(--gray50);
+    background: #fff;
+    text-align: left
+}
+
+.more-items .extra-info {
+    margin-left: 10px;
+    color: #3db192;
+    font-weight: bold
+}
+
+.more-items a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 9px;
+    white-space: nowrap;
+    line-height: 28px
+}
+
+.more-items:before {
+    position: absolute;
+    margin-top: -22px;
+    width: 100%;
+    height: 12px;
+    content: ''
+}
+
+.more-items label {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 2px 3px;
+    background-color: #3e82f8;
+    color: #fff;
+    vertical-align: 1px;
+    text-align: center;
+    font-size: 9px;
+    line-height: 1
+}
+
+.nav-main li {
+    margin-right: 23px
+}
+
+.nav-main li:last-child {
+    margin-right: 0
+}
+
+.nav-store li {
+    vertical-align: top
+}
+
+.entrances .login {
+    margin-right: 5px
+}
+
+.logo a {
+    width: 104px;
+    height: 26px;
+    background-image: url("data:image/png;base64,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");
+    background-position: top left;
+    background-repeat: no-repeat;
+    float: left;
+    overflow: hidden;
+    background-color: transparent;
+    background-size: 103px 25px;
+    background-repeat: no-repeat;
+    color: transparent;
+    line-height: 11em
+}
+
+@media (min--moz-device-pixel-ratio: 1.3),(-o-min-device-pixel-ratio: 2.6/2),(-webkit-min-device-pixel-ratio: 1.3),(min-device-pixel-ratio: 1.3),(min-resolution: 1.3dppx) {
+    .logo a {
+        background-image: url("data:image/png;base64,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");
+        background-size: 104px 26px
+    }
+}
+
+.entrances {
+    display: block;
+    float: right;
+    margin-top: -5px
+}
+
+.entrances li {
+    display: inline-block;
+    padding-left: 18px;
+    font-size: 13px
+}
+
+.entrances a, .entrances a:hover {
+    color: #825d5b
+}
+
+.icon-bookshelf {
+    width: 25px;
+    height: 19px;
+    background-image: url('https://img3.doubanio.com/f/ark/5dd72910c4402ceb83b43147169a897592732e93/pics/store/header/icon-reading.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: -4px
+}
+
+@media (min--moz-device-pixel-ratio: 1.3),(-o-min-device-pixel-ratio: 2.6/2),(-webkit-min-device-pixel-ratio: 1.3),(min-device-pixel-ratio: 1.3),(min-resolution: 1.3dppx) {
+    .icon-bookshelf {
+        background-image: url('https://img3.doubanio.com/f/ark/dbb9bed9bfa6c6c547860d7bc1397371c2e6b8cb/pics/store/header/icon-reading@2x.png');
+        background-size: 25px 19px
+    }
+}
+
+.icon-subscription {
+    width: 13px;
+    height: 24px;
+    background-image: url('https://img3.doubanio.com/f/ark/ef3f6e1e4843793e5aa0fdf13c19c9c50e13e32d/pics/store/header/icon-subscription.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: -7px
+}
+
+@media (min--moz-device-pixel-ratio: 1.3),(-o-min-device-pixel-ratio: 2.6/2),(-webkit-min-device-pixel-ratio: 1.3),(min-device-pixel-ratio: 1.3),(min-resolution: 1.3dppx) {
+    .icon-subscription {
+        background-image: url('https://img3.doubanio.com/f/ark/688ee1d6e1c9dc5c7b4c603cac2b4ea39700e055/pics/store/header/icon-subscription@2x.png');
+        background-size: 13px 24px
+    }
+}
+
+.reader-entrance, .kindle-delivery, .subscriptions-entrance {
+    vertical-align: middle
+}
+
+.reader-entrance a, .kindle-delivery a, .subscriptions-entrance a, .reader-entrance a:hover, .kindle-delivery a:hover, .subscriptions-entrance a:hover {
+    display: inline-block;
+    height: 34px;
+    background-color: #f6f6f1;
+    background-position: 0 6px;
+    color: #825d5b;
+    line-height: 34px
+}
+
+.reader-entrance a .btn-text, .kindle-delivery a .btn-text, .subscriptions-entrance a .btn-text, .reader-entrance a:hover .btn-text, .kindle-delivery a:hover .btn-text, .subscriptions-entrance a:hover .btn-text {
+    display: inline-block;
+    height: 34px;
+    vertical-align: top;
+    line-height: 34px
+}
+
+.subscriptions-entrance.has-new .icon-subscription {
+    position: relative
+}
+
+.subscriptions-entrance.has-new .icon-subscription::after {
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: -3px;
+    right: -4px;
+    border: 1px solid #fff;
+    border-radius: 7px;
+    background: #fa595e;
+    content: ''
+}
+
+.kindle-delivery a, .kindle-delivery a:hover {
+    background-position: 10px -187px
+}
+
+.top-info {
+    padding-bottom: 15px
+}
+
+.app-download a, .app-download a:hover {
+    display: inline-block;
+    padding: 0 20px;
+    height: 36px;
+    border-radius: 2px;
+    background-color: #825d5b;
+    color: #fff;
+    line-height: 36px
+}
+
+.app-download .icon-phone {
+    width: 15px;
+    height: 22px;
+    background-image: url('https://img3.doubanio.com/f/ark/15e484cbd4c6542ab978dbe6b6611c783cf2d38a/pics/icon-phone.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: -6px
+}
+
+@media (min--moz-device-pixel-ratio: 1.3),(-o-min-device-pixel-ratio: 2.6/2),(-webkit-min-device-pixel-ratio: 1.3),(min-device-pixel-ratio: 1.3),(min-resolution: 1.3dppx) {
+    .app-download .icon-phone {
+        background-image: url('https://img3.doubanio.com/f/ark/7fabdb4aa3de4df7d7972b9ddcd73ab7da5ff816/pics/icon-phone@2x.png');
+        background-size: 15px 22px
+    }
+}
+
+.user-info li {
+    float: left
+}
+
+.user-info .more-items-force-show {
+    display: block !important
+}
+
+.user-info .guide-for-user-profile {
+    border: 1px solid #ddd;
+    position: relative;
+    width: 190px;
+    height: 133px;
+    position: absolute;
+    top: 22px;
+    right: 110px;
+    z-index: 10;
+    background: #008000;
+    background: #fffff9
+}
+
+@supports (-webkit-filter:drop-shadow(0 0 3px #ddd)) {
+    .user-info .guide-for-user-profile {
+        border: none;
+        -webkit-filter: drop-shadow(0 0 3px rgba(221, 221, 221, 0.8));
+        -webkit-backface-visibility: hidden
+    }
+}
+
+.user-info .guide-for-user-profile:after, .user-info .guide-for-user-profile:before {
+    left: 100%
+}
+
+.user-info .guide-for-user-profile:after {
+    border-width: 8px 10px;
+    border-left-color: #fffff9;
+    top: 20px;
+    margin-top: -8px
+}
+
+.user-info .guide-for-user-profile:before {
+    border-width: 9px 11px;
+    border-left-color: #ddd;
+    top: 20px;
+    margin-top: -9px
+}
+
+.user-info .guide-for-user-profile .bd {
+    padding: 15px 20px;
+    text-align: center;
+    white-space: normal
+}
+
+.user-info .guide-for-user-profile .title {
+    margin-bottom: 12px;
+    color: #825d5b;
+    font-weight: bold;
+    font-size: 18px
+}
+
+.user-info .guide-for-user-profile .info {
+    margin-bottom: 18px;
+    color: #666;
+    line-height: 1.2
+}
+
+.user-info .guide-for-user-profile .guide-new {
+    width: 38px;
+    height: 38px;
+    background-image: url('https://img3.doubanio.com/f/ark/98737ee728a29f2f7c2b0f45759f2c6b8fa76e32/pics/store/user_guide/guide-new.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block
+}
+
+@media (min--moz-device-pixel-ratio: 1.3),(-o-min-device-pixel-ratio: 2.6/2),(-webkit-min-device-pixel-ratio: 1.3),(min-device-pixel-ratio: 1.3),(min-resolution: 1.3dppx) {
+    .user-info .guide-for-user-profile .guide-new {
+        background-image: url('https://img3.doubanio.com/f/ark/5d31d6b38285c15ce888cccecba27279170b8bb4/pics/store/user_guide/guide-new@2x.png');
+        background-size: 38px 38px
+    }
+}
+
+.user-info .guide-for-user-profile .actions .btn {
+    display: inline-block;
+    padding: 6px 4px;
+    width: 53px;
+    font-size: 12px
+}
+
+.user-info .guide-for-user-profile .actions .btn:hover {
+    line-height: 1
+}
+
+.user-info .guide-for-user-profile .actions .first-child {
+    margin-right: 10px
+}
+
+.user-info .more-items .icon-new {
+    position: static;
+    margin-left: 4px
+}
+
+.user-info .name {
+    margin-right: 5px
+}
+
+.user-info .name .arrow {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    border-top: 4px solid #825d5b;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    _border-left-color: pink;
+    _border-right-color: pink;
+    _-webkit-filter: chroma(color=pink);
+    _filter: chroma(color=pink);
+    display: inline-block;
+    margin: 0 0 2px 4px
+}
+
+.user-info .name:hover .arrow {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    border-top: 4px solid #fff;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    _border-left-color: pink;
+    _border-right-color: pink;
+    _-webkit-filter: chroma(color=pink);
+    _filter: chroma(color=pink)
+}
+
+.more-active {
+    position: relative
+}
+
+.more-active:hover .more-items {
+    display: block
+}
+
+.more-active .bn-more {
+    position: relative
+}
+
+.more-items {
+    top: 22px;
+    right: 0
+}
+
+.more-items a {
+    color: #3d3d3d
+}
+
+.more-items a:hover {
+    background-color: #f6f6f4;
+    color: #3d3d3d
+}
+
+#frm-search {
+    position: relative;
+    float: left;
+    margin-left: 22px;
+    width: 461px;
+    height: 27px
+}
+
+#input-query, #btn-search {
+    background: url('https://img3.doubanio.com/f/ark/b375f2702442ec96ca7fa1c2ebbd6a7b163042b5/pics/nav_bg_search.png') no-repeat
+}
+
+#input-query {
+    position: absolute;
+    padding: 6px 10px;
+    width: 423px;
+    border: none;
+    font-size: 12px
+}
+
+#btn-search {
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    width: 37px;
+    height: 32px;
+    border: none;
+    background-position: -40px -40px;
+    text-indent: -3000px
+}
+
+#btn-search:hover {
+    background-position: 0 -40px
+}
+
+.suggests-list {
+    position: absolute;
+    z-index: 10;
+    display: none;
+    margin: -1px;
+    width: 423px;
+    border: 1px solid #dadada;
+    background: #fff;
+    cursor: pointer
+}
+
+.suggests-list li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 8px 9px;
+    height: 16px;
+    border-top: 1px solid #f2f2f2;
+    color: #737373;
+    line-height: 16px
+}
+
+.suggest-item-hover {
+    background: #f2f2f2
+}
+
+.nav-reminder .no-hover {
+    background: transparent;
+    color: #825d5b
+}
+
+.nav-reminder .cart-count {
+    margin-left: 5px
+}
+
+.nav-reminder .num {
+    position: relative;
+    display: inline-block;
+    margin-top: -2px;
+    margin-left: 6px;
+    padding: 0 6px;
+    height: 15px;
+    background-color: #825d5b;
+    color: #fff;
+    text-align: center;
+    font: 10px Tahoma;
+    line-height: 15px
+}
+
+.ua-linux .nav-reminder .num, .ua-windows .nav-reminder .num {
+    -webkit-text-size-adjust: none
+}
+
+.nav-reminder .num:after {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -3px;
+    border: solid transparent;
+    border-width: 3px;
+    border-color: rgba(110, 57, 57, 0);
+    border-right-color: #825d5b;
+    content: ' ';
+    pointer-events: none
+}
+
+.article-actions {
+    overflow: hidden;
+    color: #999;
+    font-size: 13px
+}
+
+.article-actions .btn {
+    margin-right: 5px
+}
+
+.action-buttons .price-tag {
+    color: #3db192;
+    font-weight: bold
+}
+
+.price-tag {
+    margin-right: 8px;
+    vertical-align: middle
+}
+
+.price-tag .original-tag {
+    color: var(--gray)
+}
+
+.price-tag .discount-price {
+    margin-left: 5px;
+    color: #fa595f
+}
+
+.success-sign {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    background: url('https://img3.doubanio.com/f/ark/db9194e75edb1624f38cabd888001e90fffdb3ad/pics/ark/icon-tick.png') no-repeat left;
+    color: #825d5b;
+    font-weight: bold;
+    font-size: 16px
+}
+
+.form-unarchive, .form-get-sample {
+    display: inline
+}
+
+.form-get-sample .btn-compact {
+    width: 52px;
+    height: 25px;
+    border: none;
+    background-color: #ddd;
+    color: #888;
+    vertical-align: bottom;
+    white-space: nowrap
+}
+
+.form-check-pass .confirming-actions {
+    margin-top: 20px
+}
+
+.verify-passport {
+    margin: 15px 0
+}
+
+.input-wide {
+    padding: 5px;
+    width: 250px;
+    border: 1px solid #ddd;
+    font-size: 12px
+}
+
+.input-captcha {
+    margin-top: 2px
+}
+
+.confirming-actions .btn {
+    margin-left: 5px
+}
+
+.profile-actions .price-tag, .chapter-actions .price-tag {
+    margin-right: 0;
+    color: #fff
+}
+
+.shadow-cover {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 1px 1px 2px #aaa
+}
+
+.mini-shadow-cover {
+    box-shadow: 1px 1px 2px #bbb
+}
+
+.micro-shadow-cover {
+    box-shadow: 1px 1px 2px #ccc
+}
+
+.bundle-cover-empty, .bundle-cover {
+    position: relative;
+    overflow: visible
+}
+
+.bundle-cover-empty:after, .bundle-cover:after {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    background-size: 100% 100% !important;
+    content: ''
+}
+
+.bundle-cover-empty:after {
+    width: 12.910798122065728%;
+    height: 100%;
+    left: 90.7%;
+    background: url('https://img3.doubanio.com/f/ark/fab04bfd39d1137af4b73b819a6146f418d6511f/pics/mod/bundle-cover-empty@3x.png') no-repeat
+}
+
+.bundle-cover:after {
+    width: 13.250555967383248%;
+    height: 100%;
+    left: 90.3%;
+    background: url('https://img3.doubanio.com/f/ark/1e25b31333fae16e8eb1e07c860062312c85d89a/pics/mod/bundle-cover@3x.png') no-repeat
+}
+
+@supports ((-webkit-filter: drop-shadow(0 0 0 #000)) or (filter: drop-shadow(0 0 0 #000))) {
+    .bundle-cover-empty, .bundle-cover {
+        -webkit-filter: drop-shadow(1px 0 3px rgba(0, 0, 0, 0.2));
+        filter: drop-shadow(1px 0 3px rgba(0, 0, 0, 0.2));
+        box-shadow: none !important
+    }
+}
+
+.purchase-dialog .bill-info::after, .purchase-dialog .payment-amounts::before, .purchase-dialog .payment-amounts .total::after, .purchase-dialog .payment-amounts .insufficient-amount::after, .purchase-dialog .balance-deposit::after, .purchase-dialog .payment-channels::before {
+    position: absolute;
+    content: ''
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-Italic'), local('Georgia Italic')
+}
+
+@font-face {
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'arkitalic';
+    src: local('Georgia-BoldItalic'), local('Georgia Bold Italic')
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'doucoin';
+    src: url('https://img3.doubanio.com/f/ark/02188c4d0d6163cc8134121eb83ca603ec1c3772/pics/iconic/doucoin.woff') format('woff'), url('https://img3.doubanio.com/f/ark/d17548bdbd9e34caae4b3ecae79b3052dd442b27/pics/iconic/doucoin.ttf') format('truetype'), url('https://img3.doubanio.com/f/ark/01b5d034dc5c1f86a63d3a3cf5f37f6f6cc6e8bb/pics/iconic/doucoin.svg') format('svg')
+}
+
+[data-icon]:before {
+    content: attr(data-icon);
+    text-transform: none;
+    font-weight: normal;
+    font-variant: normal;
+    font-family: 'arkicons';
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.cover {
+    position: relative;
+    border-radius: 4px;
+    width: 110px;
+    height: 165px;
+    background: url('https://img3.doubanio.com/f/ark/fcf839063281097eb229b77eddfdbb03d0ec8a5e/pics/app/default-cover.png') center center/100% auto
+}
+
+.cover .cover-label::before {
+    top: 23px;
+    right: 23px;
+    width: 131px;
+    height: 36px;
+    font-size: 24px;
+    line-height: 36px;
+    transform: translate(50%, -100%) rotate(45deg) scale(.5)
+}
+
+.cover .cover-label.limited-vip-can-read-label::before {
+    font-size: 20px
+}
+
+.cover a::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    content: '';
+    opacity: 0;
+    transition: opacity .1s ease-in
+}
+
+.cover a:hover::after, .cover a:focus::after {
+    opacity: .2
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity .5s ease-in
+}
+
+.cover img.loading {
+    opacity: 0
+}
+
+.cover-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none
+}
+
+.cover-label::before {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    transform-origin: bottom center
+}
+
+.cover-label.limited-vip-can-read-label::before {
+    background: #d6c0a2;
+    color: var(--grayBlack);
+    content: '会员限免'
+}
+
+.cover-label.vip-can-read-label::before {
+    background: #d6c0a2;
+    color: var(--grayBlack);
+    content: '会员'
+}
+
+.cover-label.free-label::before {
+    background: #3e8ef8;
+    content: '免费'
+}
+
+.cover-label.sale-label::before {
+    background: #fa595f;
+    content: '特价'
+}
+
+.cover-label.limit-label::before {
+    background: #ff9e2c;
+    content: '限免'
+}
+
+.cover-label.rebate-label::before {
+    background: #f9c300;
+    content: '满减'
+}
+
+.cover-label.bundle-label::before {
+    background: #5dcaad;
+    content: '套装'
+}
+
+#ark-dialog.dialog-login-and-signup {
+    min-width: 340px;
+    min-height: 450px;
+    width: auto !important;
+    height: auto !important;
+    overflow: hidden;
+    zoom: 1
+}
+
+#ark-dialog.dialog-login-and-signup iframe {
+    min-width: 340px;
+    min-height: 450px;
+    width: auto !important;
+    height: auto !important;
+    display: none
+}
+
+#ark-dialog.dialog-login-and-signup .loading {
+    margin: 170px auto 0;
+    padding: 50px 0 0 14px;
+    background: url('https://img3.doubanio.com/f/ark/022ce13b260427ac1608e73ccdf3e697dd4e8c25/pics/icon-bird.png') no-repeat top center;
+    color: #a9a9a9;
+    text-align: center;
+    font-size: 16px
+}
+
+#ark-dialog.dialog-login-and-signup .dialog-hd {
+    display: none
+}
+
+#ark-dialog.dialog-login-and-signup .dialog-bd {
+    padding: 0 !important;
+    background: none
+}
+
+#ark-dialog.dialog-login-and-signup .k-close {
+    display: none
+}
+
+.bank-icon, .alipay-logo, .weixin-pay-logo, .paypal-logo, .deposit-logo {
+    display: block;
+    background-image: url('https://img3.doubanio.com/f/ark/a56138742d806e5d7bf079d3fd3127439814b8cd/pics/icon/common/payment-icons.png');
+    background-position: top left;
+    background-repeat: no-repeat
+}
+
+@media (min--moz-device-pixel-ratio: 1.3),(-o-min-device-pixel-ratio: 2.6/2),(-webkit-min-device-pixel-ratio: 1.3),(min-device-pixel-ratio: 1.3),(min-resolution: 1.3dppx) {
+    .bank-icon, .alipay-logo, .weixin-pay-logo, .paypal-logo, .deposit-logo {
+        background-image: url('https://img3.doubanio.com/f/ark/b2eaa1b9f2c57fdbc227c92506f980fd0078ee15/pics/icon/common/payment-icons@2x.png');
+        background-size: 150px
+    }
+}
+
+.alipay-logo {
+    background-position: 0 0
+}
+
+.weixin-pay-logo {
+    background-position: 0 -40px
+}
+
+.paypal-logo {
+    background-position: 0 -80px
+}
+
+.deposit-logo {
+    background-position: 0 -120px
+}
+
+.vip-price {
+    color: #bb996d
+}
+
+.vip-label {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 0 3px;
+    border-radius: 2px;
+    background: #eedfcc;
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.1);
+    color: var(--grayBlack);
+    vertical-align: text-bottom;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px
+}
+
+@media (max-width: 767px) {
+    .vip-label {
+        font-size: 8px;
+        line-height: 14px
+    }
+}
+
+.membership-promotion-bar .membership-link {
+    display: flex;
+    align-items: center;
+    height: 30px
+}
+
+.membership-promotion-bar .icon-vip, .membership-promotion-bar .icon-vip-added {
+    margin-right: 5px;
+    width: 20px;
+    height: 15px;
+    background: url('https://img3.doubanio.com/f/ark/fd9362761d16c293fb1ad44593281af9c974faf8/pics/common/icon-vip.svg') no-repeat center/contain
+}
+
+.membership-promotion-bar .icon-vip-added {
+    width: 26px;
+    height: 23px;
+    background-image: url('https://img3.doubanio.com/f/ark/3f566a92dbcba6f7141fc8b783137c127dcf01f9/pics/common/icon-vip-added.svg')
+}
+
+.membership-promotion-bar .promotion-text {
+    flex: 1;
+    color: var(--grayBlack);
+    font-size: 12px;
+    line-height: normal
+}
+
+.membership-promotion-bar .promotion-text:hover {
+    color: var(--grayBlack110)
+}
+
+.membership-promotion-bar .icon-next {
+    margin-left: 5px;
+    width: 6px;
+    height: 11px;
+    background: url('https://img3.doubanio.com/f/ark/b829946796aab322f1d47534ea4ba74ac318eb01/pics/common/icon-arrow-right-blueblack.svg')
+}
+
+.general-tips {
+    width: 350px
+}
+
+.general-tips .k-text {
+    margin-bottom: 20px;
+    font-size: 12px
+}
+
+.purchase-dialog {
+    position: relative;
+    margin-bottom: 120px;
+    min-width: 620px;
+    width: 620px;
+    color: #333
+}
+
+.purchase-dialog h4 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 14px
+}
+
+.purchase-dialog section {
+    margin-bottom: 12px
+}
+
+.purchase-dialog .bill-info {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 12px
+}
+
+.purchase-dialog .bill-info::after {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid var(--gray50);
+    transform: scaleY(.5);
+    transform-origin: 0 bottom
+}
+
+@-moz-document url-prefix() {
+    .purchase-dialog .bill-info::after {
+        transform: scaleY(0.5) rotate(0.001deg)
+    }
+}
+
+.purchase-dialog .works-list {
+    float: left;
+    padding-right: 10px;
+    width: 270px
+}
+
+.purchase-dialog .works-list .title {
+    font-size: 15px
+}
+
+.purchase-dialog .payment-amounts {
+    position: relative;
+    overflow: hidden;
+    padding-left: 50px;
+    text-align: right;
+    zoom: 1
+}
+
+.purchase-dialog .payment-amounts::before {
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-left: 1px solid var(--gray50);
+    transform: scaleX(.5);
+    transform-origin: 0 0
+}
+
+@-moz-document url-prefix() {
+    .purchase-dialog .payment-amounts::before {
+        transform: scaleX(0.5) rotate(0.001deg)
+    }
+}
+
+.purchase-dialog .payment-amounts .field label, .purchase-dialog .payment-amounts .field .value {
+    display: inline-block
+}
+
+.purchase-dialog .payment-amounts .field .value {
+    width: 120px
+}
+
+.purchase-dialog .payment-amounts .total {
+    padding-bottom: 12px
+}
+
+.purchase-dialog .payment-amounts .total .count {
+    font-size: 16px
+}
+
+.purchase-dialog .payment-amounts .consumptions {
+    padding: 12px 0
+}
+
+.purchase-dialog .payment-amounts .consumptions .value {
+    color: #5dcaad
+}
+
+.purchase-dialog .payment-amounts .consumptions .field {
+    margin-bottom: 10px
+}
+
+.purchase-dialog .payment-amounts .consumptions .field:last-child {
+    margin-bottom: 0
+}
+
+.purchase-dialog .payment-amounts .insufficient-amount {
+    padding-top: 8px
+}
+
+.purchase-dialog .payment-amounts .insufficient-amount .value {
+    font-size: 24px
+}
+
+.purchase-dialog .payment-amounts .total {
+    position: relative
+}
+
+.purchase-dialog .payment-amounts .total::after {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid var(--gray50);
+    transform: scaleY(.5);
+    transform-origin: 0 bottom
+}
+
+@-moz-document url-prefix() {
+    .purchase-dialog .payment-amounts .total::after {
+        transform: scaleY(0.5) rotate(0.001deg)
+    }
+}
+
+.purchase-dialog .payment-amounts .insufficient-amount {
+    position: relative
+}
+
+.purchase-dialog .payment-amounts .insufficient-amount::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-top: 1px solid var(--gray50);
+    transform: scaleY(.5);
+    transform-origin: 0 0
+}
+
+@-moz-document url-prefix() {
+    .purchase-dialog .payment-amounts .insufficient-amount::after {
+        transform: scaleY(0.5) rotate(0.001deg)
+    }
+}
+
+.purchase-dialog .balance-deposit {
+    position: relative;
+    padding-bottom: 12px;
+    color: var(--gray)
+}
+
+.purchase-dialog .balance-deposit::after {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid var(--gray50);
+    transform: scaleY(.5);
+    transform-origin: 0 bottom
+}
+
+@-moz-document url-prefix() {
+    .purchase-dialog .balance-deposit::after {
+        transform: scaleY(0.5) rotate(0.001deg)
+    }
+}
+
+.purchase-dialog .balance-deposit .sep::before {
+    display: inline-block;
+    margin: 0 8px;
+    content: '|';
+    vertical-align: 2px;
+    font-size: 9px
+}
+
+.purchase-dialog .radio {
+    margin: 5px 8px 0 10px;
+    vertical-align: top
+}
+
+.purchase-dialog .payment-channels {
+    position: relative;
+    margin: 0;
+    margin-bottom: 15px
+}
+
+.purchase-dialog .payment-channels::before {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid var(--gray50);
+    transform: scaleY(.5);
+    transform-origin: 0 bottom
+}
+
+@-moz-document url-prefix() {
+    .purchase-dialog .payment-channels::before {
+        transform: scaleY(0.5) rotate(0.001deg)
+    }
+}
+
+.purchase-dialog .payment-channels .title {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 14px
+}
+
+.purchase-dialog .payment-channels .field-label {
+    font-size: 12px
+}
+
+.purchase-dialog .purchase-options {
+    margin-bottom: -30px
+}
+
+.purchase-dialog .purchase-options .checkbox {
+    color: #999;
+    font-size: 12px;
+    cursor: pointer
+}
+
+.purchase-dialog .purchase-tip {
+    position: absolute;
+    top: 100%;
+    margin-left: -20px;
+    padding: 15px 0;
+    width: 100%;
+    background: #f6f6ef
+}
+
+.purchase-dialog .purchase-tip h4 {
+    margin: 0 0 7px 20px;
+    line-height: 14px
+}
+
+.purchase-dialog .purchase-tip li {
+    margin-left: 36px;
+    list-style: disc;
+    line-height: 17px
+}
+
+.purchase-dialog .purchase-tip a:not(.tel-link) {
+    margin: 0 3px
+}
+
+.purchase-dialog .membership-promotion-bar {
+    margin: -15px 0 15px;
+    padding: 0 10px;
+    background: #f4efe7
+}
+
+.purchase-dialog .membership-promotion-bar.is-vip {
+    background: #eedfcc
+}
+
+.purchase-dialog .channel {
+    margin-bottom: 0;
+    width: 580px
+}
+
+.purchase-dialog .channel .fields {
+    margin-left: 10px
+}
+
+.purchase-dialog .channel .radio input {
+    float: none;
+    margin-right: 8px
+}
+
+.purchase-dialog .channel-inline {
+    display: inline-block
+}
+
+.purchase-dialog .channel-name {
+    display: block;
+    margin-bottom: 10px
+}
+
+.purchase-dialog .bank-box {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    border: 1px solid #ddd;
+    background: #fff;
+    vertical-align: middle
+}
+
+.purchase-dialog .bank-box .bank-icon {
+    display: inline-block;
+    width: 150px;
+    height: 40px
+}
+
+.purchase-dialog .payment-method {
+    margin-bottom: 23px;
+    width: 173px;
+    white-space: nowrap;
+    font-size: 0;
+    cursor: pointer
+}
+
+.purchase-dialog .payment-method [type=radio]:checked ~ .bank-box {
+    border-color: #b0605e
+}
+
+.purchase-dialog .method-alipay-express {
+    margin-bottom: 0
+}
+
+.purchase-dialog .fields-inline .help-block {
+    padding-left: 18px;
+    width: 340px;
+    font-size: 12px
+}
+
+.purchase-success-dialog {
+    width: 350px
+}
+
+.purchase-success-dialog p {
+    margin-bottom: 5px
+}
+
+.count-down-tip {
+    color: #999
+}
+
+.count-down-num {
+    margin-right: 3px
+}
+
+.success-sign {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    background: url('https://img3.doubanio.com/f/ark/db9194e75edb1624f38cabd888001e90fffdb3ad/pics/ark/icon-tick.png') no-repeat left;
+    color: #825d5b;
+    font-weight: bold;
+    font-size: 16px
+}
+
+.dropdown-menu {
+    color: #825d5b
+}
+
+.dropdown-menu > li {
+    margin-bottom: 5px;
+    font-size: 16px
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 10px 3px 5px
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #edede7;
+    color: #825d5b
+}
+
+.dropdown-menu .active > a {
+    background-color: #edede7;
+    color: #825d5b
+}
+
+.dropdown-submenu > a {
+    outline: none;
+    background-image: url("data:image/png;base64,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");
+    background-position: right center;
+    background-origin: content-box;
+    background-repeat: no-repeat
+}
+
+.submenu-list {
+    display: none;
+    margin: 5px 0 0 23px
+}
+
+.submenu-list li {
+    padding: 2px 0
+}
+
+.submenu-list a {
+    font-size: 14px
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),(-webkit-min-device-pixel-ratio: 192),(min-resolution: 192dppx) {
+    .dropdown-submenu > a {
+        background-image: url("data:image/png;base64,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");
+        background-size: 8px 4px
+    }
+}
+
+.report-dialog, .report-result {
+    min-height: 150px;
+    width: 500px
+}
+
+.report-dialog .help-block span, .report-result .help-block span {
+    margin-right: 5px
+}
+
+.report-dialog .tip-type li, .report-result .tip-type li {
+    margin: 10px 10px 10px 20px
+}
+
+.report-dialog .tip-type label, .report-result .tip-type label {
+    cursor: pointer
+}
+
+.report-dialog .tip-type input, .report-result .tip-type input {
+    margin-right: 10px
+}
+
+.using-dialog-v2 #ark-dialog {
+    position: relative;
+    width: 752px;
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.1);
+    white-space: normal
+}
+
+.using-dialog-v2 #ark-dialog::before {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    bottom: -100%;
+    left: 0;
+    border: 1px solid var(--gray50);
+    content: '';
+    transform: scale(.5);
+    transform-origin: 0 0;
+    pointer-events: none
+}
+
+@-moz-document url-prefix() {
+    .using-dialog-v2 #ark-dialog::before {
+        transform: scale(0.5) rotate(0.001deg)
+    }
+}
+
+.using-dialog-v2 #ark-dialog .dialog-hd {
+    padding: 20px 40px 20px 20px
+}
+
+.using-dialog-v2 #ark-dialog .dialog-bd {
+    padding: 0 20px 20px;
+    background: #fff
+}
+
+.using-dialog-v2 #ark-dialog .k-title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1
+}
+
+.using-dialog-v2 #ark-dialog .k-close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 11px;
+    right: 10px;
+    background: url('https://img3.doubanio.com/f/ark/5c8ff5073938b62f35b6fb2c8de2c48ee8378457/pics/common/icon-cross-13-blue.svg') center/13px no-repeat;
+    font-size: 0
+}
+
+.using-dialog-v2 #ark-dialog .k-buttons {
+    margin-top: 10px;
+    text-align: right;
+    direction: rtl
+}
+
+.using-dialog-v2 #ark-dialog .k-buttons > * {
+    direction: initial
+}
+
+.using-dialog-v2 #ark-dialog .k-buttons .btn {
+    margin-left: 10px
+}
+
+.using-dialog-v2 #ark-dialog p {
+    margin-bottom: 10px
+}
+
+.using-dialog-v2 #ark-dialog p:last-of-type {
+    margin-bottom: 0
+}
+
+@media (max-width: 768px) {
+    .using-dialog-v2 #ark-overlay .k-content {
+        background: none
+    }
+
+    .using-dialog-v2 #ark-dialog {
+        margin: 0;
+        width: auto;
+        background: var(--blue5)
+    }
+
+    .using-dialog-v2 #ark-dialog .dialog-bd {
+        background: var(--blue5)
+    }
+}
+
+.using-dialog-v2 .dialog-hd {
+    background: transparent
+}
+
+.using-dialog-v2 .dialog-hd .k-title {
+    color: var(--grayBlack)
+}
+
+.using-dialog-v2 .k-text {
+    margin-bottom: 0
+}
+
+.using-dialog-v2 .dialog-bd {
+    color: var(--grayBlack)
+}
+
+.using-dialog-v2 .dialog-bd textarea {
+    border-color: var(--gray50)
+}
+
+.using-dialog-v2 .dialog-bd .btn {
+    width: 92px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    background: #389eac;
+    color: #fff;
+    font-size: 13px;
+    line-height: 30px
+}
+
+.using-dialog-v2 .dialog-bd .btn:hover {
+    background: #108899
+}
+
+.using-dialog-v2 .dialog-bd .btn-minor {
+    position: relative;
+    background: #fff;
+    color: #389eac
+}
+
+.using-dialog-v2 .dialog-bd .btn-minor::after {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    bottom: -100%;
+    left: 0;
+    border: 1px solid var(--gray50);
+    content: '';
+    transform: scale(.5);
+    transform-origin: 0 0;
+    pointer-events: none
+}
+
+@-moz-document url-prefix() {
+    .using-dialog-v2 .dialog-bd .btn-minor::after {
+        transform: scale(0.5) rotate(0.001deg)
+    }
+}
+
+.using-dialog-v2 .dialog-bd .btn-minor::after {
+    border-radius: 8px
+}
+
+.using-dialog-v2 .dialog-bd .btn-minor:hover {
+    background: var(--blue5)
+}
+
+article {
+    margin-bottom: 50px
+}
+
+.submenu {
+    margin: 0 0 20px;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #ddd
+}
+
+.submenu li {
+    display: inline;
+    margin-right: 20px
+}
+
+.submenu a {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 3px;
+    line-height: 1
+}
+
+aside.col4 {
+    float: right
+}
+
+.cover {
+    float: left;
+    margin-right: 13px
+}
+
+.app-article {
+    float: left;
+    width: 600px
+}
+
+article .item-expanded .article-desc-brief, article .item .article-desc-full {
+    display: none
+}
+
+article .item {
+    margin-bottom: 10px
+}
+
+article .item-expanded .article-desc-full, article .article-desc-brief {
+    display: block
+}
+
+article .article-desc-full, article .article-desc-brief {
+    overflow: hidden
+}
+
+.article-desc-full p, .article-desc-brief p {
+    text-indent: 24px
+}
+
+p.view-detail-context {
+    text-indent: 0
+}
+
+.article-desc-full p {
+    margin-bottom: 0
+}
+
+.article-meta .article-property {
+    margin-bottom: 4px
+}
+
+.article-meta .property-name {
+    margin-right: 6px;
+    color: #666
+}
+
+.triangle-top, .triangle-right, .triangle-bottom {
+    width: 0;
+    height: 0;
+    border-width: 4px;
+    border-style: solid;
+    font-size: 0
+}
+
+.triangle-right {
+    border-color: transparent transparent transparent #fff
+}
+
+.triangle-bottom {
+    border-color: #825d5b transparent transparent
+}
+
+.triangle-top {
+    border-color: transparent transparent #825d5b
+}
+
+.contribution, .contribution:hover {
+    padding: 7px 40px 7px 20px
+}
+
+.contribution .triangle-right {
+    position: absolute;
+    top: 10px;
+    right: 10px
+}
+
+.view-detail-context {
+    position: relative;
+    float: left
+}
+
+.view-detail-context .triangle-top {
+    position: absolute;
+    top: 4px;
+    margin-left: 5px
+}
+
+.view-detail .triangle-bottom {
+    position: absolute;
+    top: 8px;
+    margin-left: 5px
+}
+
+p.notice {
+    color: #666;
+    font-size: 12px
+}
+
+.partners .notice {
+    margin-bottom: 14px;
+    border-bottom: 1px solid #ddd
+}
+
+.article-title {
+    font-weight: bold;
+    font-size: 20px
+}
+
+.partner-profile-heading {
+    overflow: hidden;
+    background-color: #eeeae3
+}
+
+.partners p, .partners {
+    font-size: 12px
+}
+
+.partner-avatar, .partner-name {
+    float: left
+}
+
+.partner-avatar {
+    vertical-align: bottom
+}
+
+.partner-link, .partner-name {
+    height: 48px;
+    vertical-align: middle;
+    font-size: 18px;
+    line-height: 48px
+}
+
+.partner-name {
+    margin-left: .5em
+}
+
+.partner-link {
+    float: right;
+    margin-right: 1.5em;
+    font-size: 12px
+}
+
+.partner-link a {
+    padding: 0 .2em
+}
+
+.partner-profile-body {
+    margin-top: 2em
+}
+
+.partner-featured-article {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 20px
+}
+
+.partner-featured-article .info {
+    float: none;
+    overflow: hidden;
+    width: auto
+}
+
+.store-tabs .tab {
+    display: inline-block;
+    margin-right: 10px
+}
+
+.store-tabs .tab a {
+    display: block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-align: center
+}
+
+.store-tabs .tab a:hover, .store-tabs .ark-tab-activated a:hover, .store-tabs .ark-tab-activated a {
+    background: #825d5b
+}
+
+.store-tabs .ark-tab-activated a {
+    color: #fff
+}
+
+.app-article h2 {
+    font-size: 16px
+}
+
+p.short-story-meta, .article-abstract p {
+    font-size: 14px
+}
+
+.label {
+    margin-right: 1em;
+    color: #666
+}
+
+.article-profile-primary .label, .article-profile-primary .labeled-text {
+    font-size: 14px
+}
+
+.page-title {
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd
+}
+
+.page-title h2 {
+    color: #666;
+    font-size: 18px
+}
+
+section h3 {
+    color: #333;
+    font-size: 18px
+}
+
+section .lined {
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd
+}
+
+section .hd {
+    margin-bottom: 15px
+}
+
+.short-story-meta .author {
+    margin-right: 1em
+}
+
+.expand-article-abstract {
+    margin-top: 9px
+}
+
+.article-abstract strong {
+    font-weight: bold
+}
+
+.info .title {
+    word-wrap: break-word;
+    -ms-word-wrap: break-word
+}
+
+.more-links {
+    position: absolute;
+    top: 6px;
+    right: 3px
+}
+
+.nav-intra {
+    font-size: 14px
+}
+
+.nav-intra:before {
+    padding-right: 5px;
+    content: '>'
+}
+
+.app-list {
+    overflow: hidden;
+    height: 65px
+}
+
+.app-list a {
+    display: block;
+    overflow: hidden;
+    height: 65px;
+    background-color: var(--blue10);
+    color: var(--grayBlack);
+    text-align: center;
+    font-size: 12px;
+    line-height: 105px
+}
+
+.app-list a:hover {
+    background-color: #e4ecee;
+    color: inherit
+}
+
+.app-list li {
+    display: inline-block
+}
+
+.app-list .web-app {
+    padding-right: 2px;
+    width: 55px
+}
+
+.app-list .others-app {
+    width: 135px
+}
+
+.icon-device-web, .icon-device-ipad {
+    background-repeat: no-repeat
+}
+
+.icon-device-web, .icon-device-ipad, .icon-device-web:hover, .icon-device-ipad:hover {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAABZCAMAAACDvm3MAAAAM1BMVEVoq7f///9oq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7fljK5IAAAAEHRSTlMAABEiM0RVZneImaq7zN3uf6QJ9gAAAKZJREFUSMft1s0OgyAQRtEPKoJ/nXn/p+2CWkVwpk1j3MzdYQ6yIBDg9FDHOcqjH0zkXfQxnpk5vg0JhjbTXsubudRQGkk2zwjAp0UyW/eYxFK9c0DPcsHhQYohj4m1BpRzyu3ILV/9R6t9Ts2YMWPmHlNeeoUZyhcAYb3jdoZrw7U5rmXmxIxhUszcAQizaHD4YuZiQ3xyLor+MiHopjs3jQdXWs0LDqMuuXLR2hYAAAAASUVORK5CYII=");
+    background-position: top left;
+    background-repeat: no-repeat
+}
+
+@media (min--moz-device-pixel-ratio: 1.3),(-o-min-device-pixel-ratio: 2.6/2),(-webkit-min-device-pixel-ratio: 1.3),(min-device-pixel-ratio: 1.3),(min-resolution: 1.3dppx) {
+    .icon-device-web, .icon-device-ipad, .icon-device-web:hover, .icon-device-ipad:hover {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAACyCAMAAADI80m5AAABTVBMVEVoq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7doq7f5YaLxAAAAbnRSTlMAAQIDBAUGBwgJCgwNDhEXGhscHR4hKTAxMjQ2ODw9P0hKT1NWWFpbXGFiZWdpamxucHN0dXh7fX6EhoeIioyQlZaanaCkq6+ys76/wMHIycrMz9DS1NXY2d3e4ePo6evs7e7w8/X29/j5+/z9/kODiO4AAAHeSURBVGje7drXUsJAFIDhgxWx9967CFZEjdh7712BxU4473/pRRTSA7s4jnj+q4Sw3wybhMlkFiCNJpi2EeAqgNp8P8+4KywqNmE8yiG3HqnejqNFPhNmRdmI79RolMILRA4G8apYzfQgJ4O9amYKERFfmFkjJswiY+wVERGnjecikNGZkoxjiCGGGGKI+Wnm8TQLzI3fDR2bH2LM2UABAADULUT4mYNuV3LH4z3nZMp0++V8jHnE/AYzkxWm5sHmMckq5TFpvyh1YZ4hfxvfF7hrC0WSvph5FEu5xQYTgky8EwAaXlG02yKAbRRvFGpl66PhG3VR6y8ewqjj3Fn9satK2J6mtBmEoSxMDcqQH7pO/fwIY4yxJ9nuHvg++pgadukFiqIoiqIoiqIoiqIoisrZxk7UdfEykubV3ECao9qO37VvEPWMhPh21O6g1D/rX0SaMIjPdfbMFKbF4EQmM2HNSM6M5DDFUi4ywewwAWKIIUaUkZf7L8WZvSaAAv+DGHPXp2yVzr3wM7PBkuR21Vo/L5Nn2ONijBFDDDHEEPNnmEyWufxv5n240vshzqwCwLo4EwKApUyZScOAaCM0xwyfjtsztcYR8r1x8VKs2uESbd0LOy78Cu+26EZ9Aot4298v99jRAAAAAElFTkSuQmCC");
+        background-size: 35px 89px
+    }
+}
+
+.icon-device-web {
+    background-position: center 20px
+}
+
+.icon-device-ipad {
+    background-position: center -41px
+}
+
+.web-app .icon-device-web {
+    background-position: center 10px
+}
+
+.others-app {
+    position: relative;
+    cursor: pointer
+}
+
+.others-app .icon-device-ipad {
+    background-position: 3px -50px
+}
+
+.others-app .title {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    font-size: 14px;
+    line-height: 1.2
+}
+
+.others-app .detail b {
+    font-weight: normal
+}
+
+.entrance .arrow-right {
+    display: inline-block;
+    margin-left: 15px;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    border-left: 5px solid #fff;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    _border-top-color: pink;
+    _border-bottom-color: pink;
+    _-webkit-filter: chroma(color=pink);
+    _filter: chroma(color=pink)
+}
+
+.entrance .btn {
+    padding: 6px 10px
+}
+
+.icon-cal {
+    background-image: url('https://img3.doubanio.com/f/ark/b99d4031269e5abc2b800db76da103a21ba13d52/pics/store/icon-cal.png');
+    background-position: top left;
+    background-repeat: no-repeat
+}
+
+@media (min--moz-device-pixel-ratio: 1.3),(-o-min-device-pixel-ratio: 2.6/2),(-webkit-min-device-pixel-ratio: 1.3),(min-device-pixel-ratio: 1.3),(min-resolution: 1.3dppx) {
+    .icon-cal {
+        background-image: url('https://img3.doubanio.com/f/ark/e433881323e52152af60e1ca8fd76bb01648f68a/pics/store/icon-cal@2x.png');
+        background-size: 12px 15px
+    }
+}
+
+.flag-new {
+    width: 12px;
+    height: 12px;
+    background: url('https://img3.doubanio.com/f/ark/3a5b8da01fec74aaf0a7c05f7a247c10ff5f411c/pics/common/flag-new.svg') no-repeat
+}
+
+.flag-ing {
+    width: 28px;
+    height: 12px;
+    background: url('https://img3.doubanio.com/f/ark/7b13095df63f90d58e6f718d565565c246a4a13f/pics/common/flag-ing.svg') no-repeat
+}
+
+.nav-store li {
+    position: relative
+}
+
+.nav-store li .icon-flag {
+    position: absolute;
+    top: -1px
+}
+
+.nav-store li .flag-new {
+    right: -7px;
+    animation: flag-bounce .4s ease-in-out alternate infinite
+}
+
+.nav-store li .flag-ing {
+    right: -23px
+}
+
+.nav-store li.on .flag-new {
+    right: -14px
+}
+
+.nav-store li.on .flag-ing {
+    right: -30px
+}
+
+.general-tips, .subscribe-tips {
+    width: 350px
+}
+
+.general-tips .k-text, .subscribe-tips .k-text {
+    margin-bottom: 20px;
+    font-size: 12px
+}
+
+.browser-tips {
+    width: 700px
+}
+
+.count-down-tip {
+    color: #999
+}
+
+.count-down-num {
+    margin-right: 3px
+}
+
+.success-sign {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    background: url('https://img3.doubanio.com/f/ark/db9194e75edb1624f38cabd888001e90fffdb3ad/pics/ark/icon-tick.png') no-repeat left;
+    color: #825d5b;
+    font-weight: bold;
+    font-size: 16px
+}
+
+.price-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%
+}
+
+.price-info .price-tag {
+    position: static;
+    line-height: 1.5
+}
+
+.price-info .btn-preview {
+    float: right;
+    background-color: #a17e7e
+}
+
+.price-info .purchased {
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 1.5
+}
+
+.kinds .hd {
+    margin-bottom: 0
+}
+
+.kinds.has-levels .kinds-list {
+    border-top: 1px solid #eee
+}
+
+.kinds .tabs-header {
+    padding: 12px 0
+}
+
+.kinds .tabs-header li {
+    display: inline-block;
+    margin-right: 9px;
+    padding: 0 6px;
+    height: 20px;
+    border-radius: 2px;
+    color: #825d5b;
+    line-height: 20px;
+    cursor: pointer
+}
+
+.kinds .tabs-header li.ark-tab-activated {
+    background: #825d5b;
+    color: #fff
+}
+
+.kinds-list li {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #eee
+}
+
+.kinds-list a {
+    display: block;
+    margin: 1px 0;
+    padding: 12px 5px;
+    height: 13px;
+    color: #389eac;
+    font-size: 13px;
+    line-height: 1
+}
+
+.kinds-list a.on, .kinds-list a:hover {
+    background: var(--blue10);
+    color: #389eac
+}
+
+.icon-doucoin {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'doucoin';
+    line-height: 1;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-doucoin::before {
+    content: '\0041'
+}
+
+.footer-banner {
+    margin-bottom: 50px
+}
+
+@-moz-keyframes flag-bounce {
+    100% {
+        transform: translateY(1px)
+    }
+}
+
+@-webkit-keyframes flag-bounce {
+    100% {
+        transform: translateY(1px)
+    }
+}
+
+@-o-keyframes flag-bounce {
+    100% {
+        transform: translateY(1px)
+    }
+}
+
+@keyframes flag-bounce {
+    100% {
+        transform: translateY(1px)
+    }
+}

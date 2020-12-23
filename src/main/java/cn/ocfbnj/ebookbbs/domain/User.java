@@ -1,4 +1,4 @@
-package cn.ocfbnj.ebookbbs.pro;
+package cn.ocfbnj.ebookbbs.domain;
 
 public class User {
     private int id;
@@ -54,7 +54,7 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
-                ", creatime='" + creatTime + '\'' +
+                ", creatTime='" + creatTime + '\'' +
                 '}';
     }
 }

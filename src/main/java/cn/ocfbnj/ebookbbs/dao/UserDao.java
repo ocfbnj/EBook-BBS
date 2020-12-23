@@ -1,6 +1,6 @@
 package cn.ocfbnj.ebookbbs.dao;
 
-import cn.ocfbnj.ebookbbs.pro.User;
+import cn.ocfbnj.ebookbbs.domain.User;
 
 public interface UserDao {
     /**

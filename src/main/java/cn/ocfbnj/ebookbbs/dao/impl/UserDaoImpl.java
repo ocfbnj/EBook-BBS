@@ -1,7 +1,7 @@
 package cn.ocfbnj.ebookbbs.dao.impl;
 
 import cn.ocfbnj.ebookbbs.dao.UserDao;
-import cn.ocfbnj.ebookbbs.pro.User;
+import cn.ocfbnj.ebookbbs.domain.User;
 
 public class UserDaoImpl extends BaseDao implements UserDao {
 
