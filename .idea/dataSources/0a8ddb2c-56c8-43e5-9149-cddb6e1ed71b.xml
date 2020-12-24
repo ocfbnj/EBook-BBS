@@ -931,7 +931,7 @@ SELECT|sys.sys_config
       <RoutineKind>procedure</RoutineKind>
     </routine>
     <routine id="291" parent="2" name="register_user">
-      <SourceTextLength>151</SourceTextLength>
+      <SourceTextLength>171</SourceTextLength>
       <Definer>root@%</Definer>
       <RoutineKind>procedure</RoutineKind>
     </routine>
@@ -1055,90 +1055,104 @@ SELECT|sys.sys_config
       <Position>8</Position>
       <DataType>varchar(32)|0s</DataType>
     </column>
-    <key id="317" parent="287" name="PRIMARY">
+    <column id="317" parent="287" name="create_time">
+      <Position>9</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="318" parent="287" name="username">
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="319" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="318" parent="288" name="ebook_id">
+    <key id="320" parent="287" name="username">
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>username</UnderlyingIndexName>
+    </key>
+    <column id="321" parent="288" name="ebook_id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="319" parent="288" name="comment_id">
+    <column id="322" parent="288" name="comment_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="320" parent="288" name="content">
+    <column id="323" parent="288" name="content">
       <Position>3</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="321" parent="288" name="parent_comment_id">
+    <column id="324" parent="288" name="parent_comment_id">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="322" parent="288" name="user_id">
+    <column id="325" parent="288" name="user_id">
       <Position>5</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="323" parent="288" name="date">
+    <column id="326" parent="288" name="date">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="324" parent="289" name="user_id">
+    <column id="327" parent="289" name="user_id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="325" parent="289" name="password">
+    <column id="328" parent="289" name="password">
       <Position>2</Position>
       <DataType>varchar(32)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <argument id="326" parent="290" name="parent_comment_id_">
+    <argument id="329" parent="290" name="parent_comment_id_">
       <Position>1</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="327" parent="290" name="content_">
+    <argument id="330" parent="290" name="content_">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </argument>
-    <argument id="328" parent="290" name="user_id_">
+    <argument id="331" parent="290" name="user_id_">
       <Position>3</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="329" parent="290" name="ebook_id_">
+    <argument id="332" parent="290" name="ebook_id_">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </argument>
-    <argument id="330" parent="291" name="username_">
+    <argument id="333" parent="291" name="username_">
       <Position>1</Position>
       <DataType>varchar(18)|0s</DataType>
     </argument>
-    <argument id="331" parent="291" name="password_">
+    <argument id="334" parent="291" name="password_">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
     </argument>
-    <argument id="332" parent="291" name="name_">
+    <argument id="335" parent="291" name="name_">
       <Position>3</Position>
       <DataType>varchar(8)|0s</DataType>
     </argument>
-    <argument id="333" parent="291" name="sex_">
+    <argument id="336" parent="291" name="sex_">
       <Position>4</Position>
       <DataType>enum(&apos;M&apos;, &apos;F&apos;)|0e</DataType>
     </argument>
-    <argument id="334" parent="291" name="age_">
+    <argument id="337" parent="291" name="age_">
       <Position>5</Position>
       <DataType>tinyint|0s</DataType>
     </argument>
-    <argument id="335" parent="291" name="phone_">
+    <argument id="338" parent="291" name="phone_">
       <Position>6</Position>
       <DataType>char(11)|0s</DataType>
     </argument>
-    <argument id="336" parent="291" name="email_">
+    <argument id="339" parent="291" name="email_">
       <Position>7</Position>
       <DataType>varchar(20)|0s</DataType>
     </argument>
