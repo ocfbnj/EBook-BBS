@@ -9,5 +9,8 @@
         <module name="EBook_BBS" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="EBook_BBS" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
