@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../style/inner.css">
     <link rel="stylesheet" href="../style/innerLay.css">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../scripts/jquery-3.5.1.js"></script>
     <script src="../scripts/include.js"></script>
 </head>
 
@@ -150,26 +150,27 @@
                                                 <a class="btn-contained btn-comment" href="" data-size="s">
                                                     <span class="count">0</span>
                                                 </a>
-                                                <!--分享按钮-->
-                                                <div class="actions-more">
-                                                    <a class="btn-comment-share" data-size="s">
-                                                        分享
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 6"
-                                                             class="icon-more fill-current-color">
-                                                            <path fill="#fff"
-                                                                  d="M0 4.9L.92 6 5.5 1.9 10.08 6 11 4.9 5.52 0 0 4.9z"></path>
-                                                        </svg>
-                                                    </a>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
+
+
                                 </div>
                             </li>
 
                         </ul>
                         <a href="/ebook/53222565/comments" target="_blank" class="lnk-more">更多评论 8</a>
+                        <div class="comment-content">
+                            <div style="font-size: larger;">发布评论</div>
+                            <textarea style="width: 100%;height:90px;" id="comment-text"></textarea>
+                            <div class="btn-contained btn-comment" id="btn-comment"
+                                 style="float: right;margin-top: 8px;">
+                                回复
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
 
                 <!--书评模块-->
