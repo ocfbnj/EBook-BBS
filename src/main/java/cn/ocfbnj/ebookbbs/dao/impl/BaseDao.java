@@ -1,6 +1,6 @@
 package cn.ocfbnj.ebookbbs.dao.impl;
 
-import cn.ocfbnj.ebookbbs.utils.C3P0Utils;
+import cn.ocfbnj.ebookbbs.utils.DataBaseUtil;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
@@ -11,7 +11,7 @@ import java.util.List;
 
 // Database access object
 abstract public class BaseDao {
-    private final QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
+    private final QueryRunner queryRunner = new QueryRunner(DataBaseUtil.getDataSource());
 
     //添加、修改、删除
     public int update(String sql, Object... args) {
@@ -41,7 +41,7 @@ abstract public class BaseDao {
         } catch (SQLException throwable) {
             throwable.printStackTrace();
         }
-        
+
         return null;
     }
 
