@@ -9,18 +9,20 @@ public class UserServiceImpl implements UserService {
     private final UserDao userDao = new UserDaoImpl();
 
     @Override
-    public boolean registerUser(User user) {
-        int num = userDao.saveUser(user);
-        return num > 0;
+    public boolean register(User user) {
+        User u = userDao.findByUsername(user.getUsername());
+
+        if (u != null) {
+            return false;
+        }
+
+        userDao.registerUser(user);
+
+        return true;
     }
 
     @Override
     public User login(User user) {
-        return userDao.queryUserByUsernameAndPassword(user.getUsername(), user.getPassword());
-    }
-
-    @Override
-    public boolean existsUsername(String username) {
-        return userDao.queryUserByUsername(username) != null;
+        return userDao.findByUsernameAndPassword(user.getUsername(), user.getPassword());
     }
 }

@@ -2,7 +2,10 @@ package cn.ocfbnj.ebookbbs.utils;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class DataBaseUtil {
     private static final BasicDataSource dataSource;
@@ -13,6 +16,7 @@ public class DataBaseUtil {
 
     static {
         BasicDataSource ds = new BasicDataSource();
+        ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
         ds.setUrl(url);
         ds.setUsername(name);
         ds.setPassword(pwd);
@@ -31,12 +35,6 @@ public class DataBaseUtil {
     public static void main(String[] args) throws SQLException {
         BasicDataSource ds = DataBaseUtil.getDataSource();
         Connection con = ds.getConnection();
-
-        for (int i = 0; i < 10; i++) {
-            CallableStatement callableStatement = con.prepareCall("call register_user('Bob', '123456',\n" +
-                    "null, 'M', 20, '12345678901', '1391195421@qq.com');");
-            callableStatement.execute();
-        }
 
         PreparedStatement statement = con.prepareStatement("select * from user_pwd");
         ResultSet resultSet = statement.executeQuery();
