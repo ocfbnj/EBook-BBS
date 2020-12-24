@@ -1,19 +1,23 @@
-drop database if exists ebook_bbs;
-create database ebook_bbs;
+drop
+    database if exists ebook_bbs;
+create
+    database ebook_bbs;
 
-use ebook_bbs;
+use
+    ebook_bbs;
 
 -- 用户表
 create table user
 (
-    user_id  int primary key auto_increment,
-    username varchar(16)     not null,
-    password varchar(32)     not null,
-    name     varchar(8),
-    sex      enum ('M', 'F') not null,
-    age      tinyint,
-    phone    char(11),
-    email    varchar(32)
+    user_id     int primary key auto_increment,
+    username    varchar(16) unique not null,
+    password    varchar(32)        not null,
+    name        varchar(8),
+    sex         enum ('M', 'F')    not null,
+    age         tinyint,
+    phone       char(11),
+    email       varchar(32),
+    create_time timestamp          not null
 );
 
 create view user_pwd as
@@ -29,8 +33,8 @@ create procedure register_user(in username_ varchar(18),
                                in phone_ char(11),
                                in email_ varchar(20))
 begin
-    insert into user (username, password, name, sex, age, phone, email)
-    values (username_, password_, name_, sex_, age_, phone_, email_);
+    insert into user (username, password, name, sex, age, phone, email, create_time)
+    values (username_, password_, name_, sex_, age_, phone_, email_, now());
 end
 ;;
 delimiter ;
@@ -95,7 +99,7 @@ create procedure add_comment(in parent_comment_id_ int,
 begin
     insert into comment (parent_comment_id, content, user_id, ebook_id, date)
     values (parent_comment_id_, content_, user_id_, ebook_id_, now());
-end ;;
+end;;
 delimiter ;
 
 -- 测试数据
