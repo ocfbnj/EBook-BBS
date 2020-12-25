@@ -18,10 +18,10 @@ public class UserDaoImpl extends BaseDao implements UserDao {
             user.setPassword(resultSet.getString("password"));
             user.setName(resultSet.getString("name"));
             user.setSex(resultSet.getString("sex"));
-            user.setAge(resultSet.getString("age"));
+            user.setAge(resultSet.getInt("age"));
             user.setPhone(resultSet.getString("phone"));
             user.setEmail(resultSet.getString("email"));
-            user.setCreatTime(new Date(resultSet.getTimestamp("create_time").getTime()));
+            user.setCreatTime(new Date(resultSet.getDate("create_time").getTime()));
 
             return user;
         }
@@ -102,7 +102,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
             callableStatement.setString(2, user.getPassword());
             callableStatement.setString(3, user.getName());
             callableStatement.setString(4, user.getSex());
-            callableStatement.setString(5, user.getAge());
+            callableStatement.setInt(5, user.getAge());
             callableStatement.setString(6, user.getPhone());
             callableStatement.setString(7, user.getEmail());
 
