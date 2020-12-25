@@ -1,5 +1,12 @@
 package cn.ocfbnj.ebookbbs.servlet;
 
+import cn.ocfbnj.ebookbbs.domain.CheckCode;
+import cn.ocfbnj.ebookbbs.domain.ResultInfo;
+import cn.ocfbnj.ebookbbs.domain.User;
+import cn.ocfbnj.ebookbbs.service.UserService;
+import cn.ocfbnj.ebookbbs.service.impl.UserServiceImpl;
+import org.apache.commons.beanutils.BeanUtils;
+
 import javax.imageio.ImageIO;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +17,8 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.util.Map;
 /*
  * 类：public class UserServlet
  *
@@ -25,6 +34,9 @@ import java.io.IOException;
 
 @WebServlet("/user/*")
 public class UserServlet extends BasicServlet {
+    UserService userService = new UserServiceImpl();
+    ResultInfo resultInfo = new ResultInfo();
+
     /*
      *
      * 生成验证码并发送给客户端
@@ -108,6 +120,30 @@ public class UserServlet extends BasicServlet {
         session.setAttribute("check_code", new String(rands));
     }
 
+    public void check(HttpServletRequest req, HttpServletResponse resp) {
+        Map<String, String[]> map = req.getParameterMap();
+
+        try {
+            CheckCode code = new CheckCode();
+            BeanUtils.populate(code, map);
+
+            System.out.println(code);
+
+            String check_code = (String) req.getSession().getAttribute("check_code");
+            System.out.println(check_code);
+            if (code.getValue().equals(check_code)) {
+                resultInfo.setFlag(true);
+            } else {
+                resultInfo.setFlag(false);
+                resultInfo.setErrorMessage("验证码错误");
+            }
+
+            writeValue(resp, resultInfo);
+        } catch (IllegalAccessException | InvocationTargetException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     //登录
     public void login(HttpServletRequest req, HttpServletResponse resp) {
 
@@ -116,6 +152,28 @@ public class UserServlet extends BasicServlet {
 
     //注册
     public void register(HttpServletRequest req, HttpServletResponse resp) {
+        Map<String, String[]> map = req.getParameterMap();
+        User user = new User();
+        try {
+            BeanUtils.populate(user, map);
+        } catch (IllegalAccessException | InvocationTargetException e) {
+            e.printStackTrace();
+        }
 
+        System.out.println(user);
+
+        boolean ok = userService.register(user);
+        if (ok) {
+            resultInfo.setFlag(true);
+        } else {
+            resultInfo.setFlag(false);
+            resultInfo.setErrorMessage("注册失败");
+        }
+
+        try {
+            writeValue(resp, resultInfo);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

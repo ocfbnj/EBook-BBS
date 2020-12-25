@@ -10,16 +10,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ff268c8-1088-4ca0-a76d-13f5685fc6a5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/domain/CheckCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/domain/ResultInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/EBook_BBS_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/EBook_BBS_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/0a8ddb2c-56c8-43e5-9149-cddb6e1ed71b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0a8ddb2c-56c8-43e5-9149-cddb6e1ed71b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/sql/ebook_bbs.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/sql/ebook_bbs.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EBook_BBS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EBook_BBS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/utils/DataBaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/utils/DataBaseUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/loginRegister.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/loginRegister.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,6 +72,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
@@ -63,7 +81,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.14" />
     <property name="project.structure.side.proportion" value="0.33636364" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.41">
     <configuration name="DataBaseUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -79,15 +97,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.ocfbnj.ebookbbs.dao.impl.UserDaoImpl" />
-      <module name="EBook_BBS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cn.ocfbnj.ebookbbs.dao.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -257,14 +273,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.UserDaoImpl" />
-      <item itemvalue="Application.DataBaseUtil" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.41" />
+      <item itemvalue="Application.DataBaseUtil" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.DataBaseUtil" />
-        <item itemvalue="Application.UserDaoImpl" />
       </list>
     </recent_temporary>
   </component>

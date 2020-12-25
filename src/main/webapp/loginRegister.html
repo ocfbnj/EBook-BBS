@@ -2,94 +2,228 @@
 <html lang="zh-CN">
 
 <head>
-<meta charset="utf-8">
-<title>乐源阅读|登录注册</title>
-<link rel="stylesheet" href="css/loReStyle.css">
+    <meta charset="utf-8">
+    <title>乐源阅读|登录注册</title>
+    <link href="css/loReStyle.css" rel="stylesheet">
+
+    <script src="js/jquery-3.5.1.js"></script>
 </head>
 
 <body>
 
-    <!-- 头部 -->
-    <div style="width:100%;height: 50px;background-color: #ffffff;box-shadow: 5px 1px 2px #888888;">
-        <div style=" width: 120px;height: 50px;">
-            <img src="img/elogo.png"   width="120px" height="50px"/>
+<!-- 头部 -->
+<div style="width:100%;height: 50px;background-color: #ffffff;box-shadow: 5px 1px 2px #888888;">
+    <a href="/">
+        <div style="width: 120px; height: 50px;">
+            <img alt="logo" height="50px" src="img/elogo.png" width="150px"/>
         </div>
+    </a>
+</div>
 
+<div class="content">
+    <!-- 登录 -->
+    <div class="form sign-in">
+        <h2>欢迎回来</h2>
+        <label>
+            <span>邮箱</span>
+            <input id="login_email" type="email"/>
+        </label>
+        <label>
+            <span>密码</span>
+            <input id="login_password" type="password"/>
+        </label>
+        <label>
+            <span>验证码</span>
+            <input name="check_code" type="text"/>
+            <img alt="验证码" onclick="this.src='/user/imgInit?id='+Math.random();"
+                 src="/user/imgInit" style="margin-top: 10px;">
+        </label>
+        <p class="forgot-pass"><a href="javascript:">请输入邮箱和密码</a></p>
+
+        <button class="submit" id="login_btn" type="button">登 录</button>
+        <!-- <button type="button" class="fb-btn">使用 <span>facebook</span> 帐号登录</button> -->
     </div>
 
-    <div class="content">
+    <div class="sub-cont">
+        <!-- 侧边图 -->
+        <div class="img">
+            <div class="img__text m--up">
+                <h2>还未注册？</h2>
+                <p>立即注册，发现好书！</p>
+            </div>
+            <div class="img__text m--in">
+                <h2>已有帐号？</h2>
+                <p>有帐号就登录吧，好久不见了！</p>
+            </div>
+            <div class="img__btn">
+                <span class="m--up">注 册</span>
+                <span class="m--in">登 录</span>
+            </div>
+        </div>
 
-        <!-- 登录 -->
-        <div class="form sign-in">
-            <h2>欢迎回来</h2>
-            
+        <!-- 注册 -->
+        <div class="form sign-up">
+            <h2>立即注册</h2>
+            <label>
+                <span>用户名</span>
+                <input id="register_username" type="text"/>
+            </label>
             <label>
                 <span>邮箱</span>
-                <input type="email" />
+                <input id="register_email" type="text"/>
             </label>
             <label>
                 <span>密码</span>
-                <input type="password" />
+                <input id="register_password" type="password"/>
             </label>
-            
             <label>
-                <span >验证码</span>
-                <input type="text" name="check_code"  />
-                <img src="/test/userServlet?action=imgInit" style="margin-top: 10px;"
-                    onclick="this.src='/test/userServlet/action=imgInit&id='+Math.random();">
+                <span>验证码</span>
+                <input id="register_code" name="check_code" type="text"/>
+                <img alt="验证码" onclick="this.src='/user/imgInit?id='+Math.random();"
+                     src="/user/imgInit" style="margin-top: 10px;">
             </label>
-            <p class="forgot-pass"><a href="javascript:">请输入邮箱和密码</a></p>
-            
-            <button type="button" class="submit">登 录</button>
-            <!-- <button type="button" class="fb-btn">使用 <span>facebook</span> 帐号登录</button> -->
-        </div>
-
-        <div class="sub-cont">
-            <!-- 侧边图 -->
-            <div class="img">
-                <div class="img__text m--up">
-                    <h2>还未注册？</h2>
-                    <p>立即注册，发现好书！</p>
-                </div>
-                <div class="img__text m--in">
-                    <h2>已有帐号？</h2>
-                    <p>有帐号就登录吧，好久不见了！</p>
-                </div>
-                <div class="img__btn">
-                    <span class="m--up">注 册</span>
-                    <span class="m--in">登 录</span>
-                </div>
-            </div>
-
-            <!-- 注册 -->
-            <div class="form sign-up">
-                <h2>立即注册</h2>
-                <label>
-                    <span>用户名</span>
-                    <input type="text" />
-                </label>
-                <label>
-                    <span>邮箱</span>
-                    <input type="text" />
-                </label>
-                <label>
-                    <span>密码</span>
-                    <input type="text" />
-                </label>
-                <label>
-                    <span >验证码</span>
-                    <input type="text" name="check_code"  />
-                    <img src="/test/userServlet?action=imgInit" style="margin-top: 10px;"
-                        onclick="this.src='/test/userServlet/action=imgInit&id='+Math.random();">
-                </label>
-                <button type="button" class="submit">注 册</button>
-            </div>
+            <button class="submit" id="register_btn" type="button">注 册</button>
+            <p class="forgot-pass"><a href="javascript:" id="register_message"></a></p>
         </div>
     </div>
+</div>
 
-    <script src="js/loReJs.js"></script>
-	
-	
+<script src="js/loReJs.js"></script>
+<script>
+    // *
+    // 表单校验：
+    //             1.用户名：单词字符，长度8到20位
+    // 2.密码：单词字符，长度8到20位
+    // 3.email：邮件格式
+    // 4.姓名：非空
+    // 5.手机号：手机号格式
+    // 6.出生日期：非空
+    // 7.验证码：非空
+    // */
+    //
+    // //校验用户名
+    // //单词字符，长度8到20位
+    // function checkUsername() {
+    //     //1.获取用户名值
+    //     const username = $("#username").val();
+    //     //2.定义正则
+    //     const reg_username = /^\w{6,20}$/;
+    //
+    //     //3.判断，给出提示信息
+    //     const flag = reg_username.test(username);
+    //     if (flag) {
+    //         //用户名合法
+    //         $("#username").css("border", "");
+    //     } else {
+    //         //用户名非法,加一个红色边框
+    //         $("#username").css("border", "1px solid red");
+    //     }
+    //     return flag;
+    // }
+    //
+    // //校验密码
+    // function checkPassword() {
+    //     //1.获取密码值
+    //     const password = $("#password").val();
+    //     //2.定义正则
+    //     const reg_password = /^\w{6,20}$/;
+    //
+    //     //3.判断，给出提示信息
+    //     const flag = reg_password.test(password);
+    //     if (flag) {
+    //         //密码合法
+    //         $("#password").css("border", "");
+    //     } else {
+    //         //密码非法,加一个红色边框
+    //         $("#password").css("border", "1px solid red");
+    //     }
+    //     return flag;
+    // }
+    //
+    // //校验邮箱
+    // function checkEmail() {
+    //     //1.获取邮箱
+    //     const email = $("#email").val();
+    //     //2.定义正则
+    //     const reg_email = /^\w+@\w+\.\w+$/;
+    //
+    //     //3.判断
+    //     const flag = reg_email.test(email);
+    //     if (flag) {
+    //         $("#email").css("border", "");
+    //     } else {
+    //         $("#email").css("border", "1px solid red");
+    //     }
+    //     return flag;
+    // }
+    //
+    // $(function () {
+    //     //当表单提交时，调用所有的校验方法
+    //     $("#registerForm").submit(function () {
+    //         //1.发送数据到服务器
+    //         if (checkUsername() && checkPassword() && checkEmail()) {
+    //             //校验通过,发送ajax请求，提交表单的数据   username=zhangsan&password=123
+    //             $.post("/user/register", $(this).serialize(), function (data) {
+    //                 //处理服务器响应的数据  data  {flag:true, errorMsg:""}
+    //                 if (data.flag) {
+    //                     //注册成功，跳转成功页面
+    //                     location.href = "register_ok.html";
+    //                 } else {
+    //                     //注册失败,给errorMsg添加提示信息
+    //                     $("#errorMsg").html(data.errorMessage);
+    //                 }
+    //             });
+    //         }
+    //
+    //         //如果这个方法没有返回值，或者返回为true，则表单提交，如果返回为false，则表单不提交
+    //         return false;
+    //     });
+    //
+    //     //当某一个组件失去焦点时，调用对应的校验方法
+    //     $("#username").blur(checkUsername);
+    //     $("#password").blur(checkPassword);
+    //     $("#email").blur(checkEmail);
+    // });
+
+    $(
+        $("#register_btn").click(function () {
+            let img = {
+                "value": $("#register_code").val()
+            };
+
+            $.post("/user/check", img, function (resp) {
+                if (resp.flag) {
+                    // 验证码有效
+                    $("#register_message").html("")
+
+                    // 尝试注册
+                    let data = {
+                        "username": $("#register_username").val(),
+                        "password": $("#register_password").val(),
+                        "name": null,
+                        "sex": "M",
+                        "age": 0,
+                        "phone": null,
+                        "email": $("#register_email").val()
+                    };
+
+                    $.post("/user/register", data, function (resp) {
+                        //resp: {flag: false, errorMessage: ''}
+                        if (resp.flag) {
+                            $("#register_message").html("")
+                            location = "/";
+                        } else {
+                            $("#register_message").html(resp.errorMessage)
+                        }
+                    });
+                } else {
+                    // 无效
+                    $("#register_message").html(resp.errorMessage)
+                }
+            })
+
+
+        })
+    )
+</script>
 </body>
-
-</html>
