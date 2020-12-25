@@ -57,7 +57,7 @@ create table ebook
 
 -- 测试数据
 insert into ebook (cover_path, title, author, intro)
-VALUES ('img/53222565.jpg', '小风暴1.0', '肖茉莉',
+VALUES ('img/1.jpg', '小风暴1.0', '肖茉莉',
         '献给青春，献给你！
         一部本土创投、金融精英的成长爱恨、职场奋斗史！
         本书在大时代的背景下，以金融才子高山、创投猎手秦沃为两条主线，情节围绕外交人才许信、律师木心喜、创业者谷东等年轻人的职场、创业、爱恨情仇展开。
@@ -80,16 +80,19 @@ create table comment
 );
 
 create view ebook_comment as
-select ebook.ebook_id,
+select comment.ebook_id,
        comment.comment_id,
        comment.content,
        comment.parent_comment_id,
        comment.user_id,
-       comment.date
-from ebook
+       comment.date,
+       user.username
+from user
          join
      comment
-     on ebook.ebook_id = comment.ebook_id;
+     on user.user_id = comment.user_id
+order by comment.date desc
+;
 
 delimiter ;;
 create procedure add_comment(in parent_comment_id_ int,
@@ -100,6 +103,12 @@ begin
     insert into comment (parent_comment_id, content, user_id, ebook_id, date)
     values (parent_comment_id_, content_, user_id_, ebook_id_, now());
 end;;
+
+-- TODO
+create procedure add_like(in user_id_ int, in ebook_id_ int, in common_id_ int)
+begin
+
+end ;;
 delimiter ;
 
 -- 测试数据

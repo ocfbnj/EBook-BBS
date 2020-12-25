@@ -9,12 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ff268c8-1088-4ca0-a76d-13f5685fc6a5" name="Default Changelist" comment="添加登录功能">
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="1ff268c8-1088-4ca0-a76d-13f5685fc6a5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/dao/CommentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/dao/impl/CommentDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/domain/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/getParameter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0a8ddb2c-56c8-43e5-9149-cddb6e1ed71b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0a8ddb2c-56c8-43e5-9149-cddb6e1ed71b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0a8ddb2c-56c8-43e5-9149-cddb6e1ed71b/storage_v2/_src_/schema/ebook_bbs.QhWB9g.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0a8ddb2c-56c8-43e5-9149-cddb6e1ed71b/storage_v2/_src_/schema/ebook_bbs.QhWB9g.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/EBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/EBookServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/UserServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/sql/ebook_bbs.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/sql/ebook_bbs.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/loginRegister.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/loginRegister.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/53222565.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/img/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/internal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ebook_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +34,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -66,12 +77,17 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/EBook_BBS.war" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/js" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.14" />
     <property name="project.structure.side.proportion" value="0.33636364" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\work_space\java_work\EBook_BBS\src\main\webapp\js" />
+    </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.41">
     <configuration name="DataBaseUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -87,13 +103,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -263,8 +281,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.Tomcat 9.0.41" />
       <item itemvalue="Application.DataBaseUtil" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.41" />
     </list>
     <recent_temporary>
       <list>
@@ -291,6 +309,7 @@
       <workItem from="1608820957618" duration="1105000" />
       <workItem from="1608822288893" duration="2835000" />
       <workItem from="1608877191318" duration="16000" />
+      <workItem from="1608892390603" duration="8220000" />
     </task>
     <task id="LOCAL-00001" summary="reset">
       <created>1608784559381</created>
@@ -341,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608884794918</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="添加登录功能">
+      <created>1608888240266</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1608888240266</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

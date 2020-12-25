@@ -204,4 +204,11 @@ public class UserServlet extends BasicServlet {
         // 2.重定向跳转首页
         resp.sendRedirect(req.getContextPath() + "/");
     }
+
+    public void getUser(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        Object user = req.getSession().getAttribute("user");
+        System.out.println(user);
+        //回写数据
+        writeValue(resp, user);
+    }
 }
