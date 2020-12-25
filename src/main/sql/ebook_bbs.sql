@@ -16,8 +16,8 @@ create table user
     sex         enum ('M', 'F')    not null,
     age         tinyint,
     phone       char(11),
-    email       varchar(32),
-    create_time datetime not null
+    email       varchar(32) unique not null,
+    create_time datetime           not null
 );
 
 create view user_pwd as

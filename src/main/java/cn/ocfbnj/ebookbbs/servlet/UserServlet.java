@@ -19,32 +19,29 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
+
 /*
  * 类：public class UserServlet
  *
  * 访问路径：
- * " /userServlet/ "+ 方法名
+ * " /user/ " + 方法名
  *
- * 生成验证码：    public void imgInit
- *      登录：    public void login
- *      注册：    public void regist
- *
+ * 生成验证码：   public void imgInit
+ *      登录：   public void login
+ *      注册：   public void register
+ *      登出：   public void logout
  */
-
-
 @WebServlet("/user/*")
 public class UserServlet extends BasicServlet {
     UserService userService = new UserServiceImpl();
     ResultInfo resultInfo = new ResultInfo();
 
-    /*
-     *
-     * 生成验证码并发送给客户端
-     *@param WIDTH   验证码图片宽度
-     *@param HEIGHT  验证码图片高度
-     *
+    /**
+     * 生成验证码并发送给客户端。
+     * <p>
+     * WIDTH   验证码图片宽度
+     * HEIGHT  验证码图片高度
      */
-
     private static final int WIDTH = 60;
     private static final int HEIGHT = 20;
 
@@ -144,16 +141,10 @@ public class UserServlet extends BasicServlet {
         }
     }
 
-    //登录
-    public void login(HttpServletRequest req, HttpServletResponse resp) {
-
-
-    }
-
-    //注册
-    public void register(HttpServletRequest req, HttpServletResponse resp) {
+    private User getRequestUser(HttpServletRequest req) {
         Map<String, String[]> map = req.getParameterMap();
         User user = new User();
+
         try {
             BeanUtils.populate(user, map);
         } catch (IllegalAccessException | InvocationTargetException e) {
@@ -161,6 +152,35 @@ public class UserServlet extends BasicServlet {
         }
 
         System.out.println(user);
+
+        return user;
+    }
+
+    //登录
+    public void login(HttpServletRequest req, HttpServletResponse resp) {
+        User user = getRequestUser(req);
+
+        User loginUser = userService.login(user);
+        if (loginUser != null) {
+            resultInfo.setFlag(true);
+
+            //将用户信息存入session
+            req.getSession().setAttribute("user", loginUser);
+        } else {
+            resultInfo.setFlag(false);
+            resultInfo.setErrorMessage("用户名或密码错误");
+        }
+
+        try {
+            writeValue(resp, resultInfo);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //注册
+    public void register(HttpServletRequest req, HttpServletResponse resp) {
+        User user = getRequestUser(req);
 
         boolean ok = userService.register(user);
         if (ok) {
@@ -175,5 +195,13 @@ public class UserServlet extends BasicServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    // 登出
+    public void logout(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        // 1.销毁session
+        req.getSession().invalidate();
+        // 2.重定向跳转首页
+        resp.sendRedirect(req.getContextPath() + "/");
     }
 }
