@@ -52,12 +52,14 @@ create table ebook
     cover_path varchar(128) not null,
     title      varchar(32)  not null,
     author     varchar(16)  not null,
+    classify   varchar(32)  not null,
+    price      decimal      not null,
     intro      text         not null
 );
 
 -- 测试数据
-insert into ebook (cover_path, title, author, intro)
-VALUES ('img/1.jpg', '小风暴1.0', '肖茉莉',
+insert into ebook (cover_path, title, author, classify, price, intro)
+VALUES ('img/1.jpg', '小风暴1.0', '肖茉莉', '小说', 36,
         '献给青春，献给你！
         一部本土创投、金融精英的成长爱恨、职场奋斗史！
         本书在大时代的背景下，以金融才子高山、创投猎手秦沃为两条主线，情节围绕外交人才许信、律师木心喜、创业者谷东等年轻人的职场、创业、爱恨情仇展开。
