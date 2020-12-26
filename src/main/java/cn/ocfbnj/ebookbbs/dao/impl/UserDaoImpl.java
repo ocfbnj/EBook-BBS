@@ -26,29 +26,26 @@ public class UserDaoImpl extends BaseDao implements UserDao {
             return user;
         }
 
+        resultSet.close();
+
         return null;
     }
 
     @Override
     public User findByUsername(String username) {
-        Connection connection = null;
         try {
-            connection = getConnection();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-
-        assert connection != null;
-
-        try {
+            Connection connection = getConnection();
             String sql = "select * from user where username=?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, username);
             User user = getUser(preparedStatement);
+
+            preparedStatement.close();
+            connection.close();
+
             if (user != null) {
                 return user;
             }
-
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -58,21 +55,18 @@ public class UserDaoImpl extends BaseDao implements UserDao {
 
     @Override
     public User findByUsernameAndPassword(String username, String password) {
-        Connection connection = null;
         try {
-            connection = getConnection();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
+            Connection connection = getConnection();
 
-        assert connection != null;
-
-        try {
             String sql = "select * from user where username=? and password=?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, username);
             preparedStatement.setString(2, password);
             User user = getUser(preparedStatement);
+
+            preparedStatement.close();
+            connection.close();
+
             if (user != null) {
                 return user;
             }
@@ -86,16 +80,9 @@ public class UserDaoImpl extends BaseDao implements UserDao {
 
     @Override
     public void registerUser(User user) {
-        Connection connection = null;
         try {
-            connection = getConnection();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
+            Connection connection = getConnection();
 
-        assert connection != null;
-
-        try {
             String sql = "call register_user(?, ?, ?, ?, ?, ?, ?)";
             CallableStatement callableStatement = connection.prepareCall(sql);
             callableStatement.setString(1, user.getUsername());
@@ -107,6 +94,9 @@ public class UserDaoImpl extends BaseDao implements UserDao {
             callableStatement.setString(7, user.getEmail());
 
             callableStatement.execute();
+
+            callableStatement.close();
+            connection.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

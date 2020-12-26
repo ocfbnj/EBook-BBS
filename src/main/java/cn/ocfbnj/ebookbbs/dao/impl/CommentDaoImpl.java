@@ -39,6 +39,9 @@ public class CommentDaoImpl extends BaseDao implements CommentDao {
                 comments.add(comment);
             }
 
+            preparedStatement.close();
+            connection.close();
+
             return comments;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -49,16 +52,9 @@ public class CommentDaoImpl extends BaseDao implements CommentDao {
 
     @Override
     public boolean addComment(int ebookID, int userID, String content) {
-        Connection connection = null;
         try {
-            connection = getConnection();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
+            Connection connection = getConnection();
 
-        assert connection != null;
-
-        try {
             String sql = "call add_comment(?, ?, ?, ?)";
             CallableStatement callableStatement = connection.prepareCall(sql);
             callableStatement.setString(1, null);
@@ -67,6 +63,9 @@ public class CommentDaoImpl extends BaseDao implements CommentDao {
             callableStatement.setInt(4, ebookID);
 
             callableStatement.execute();
+
+            callableStatement.close();
+            connection.close();
 
             return true;
         } catch (SQLException throwables) {
