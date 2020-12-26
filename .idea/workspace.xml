@@ -10,14 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ff268c8-1088-4ca0-a76d-13f5685fc6a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0a8ddb2c-56c8-43e5-9149-cddb6e1ed71b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0a8ddb2c-56c8-43e5-9149-cddb6e1ed71b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0a8ddb2c-56c8-43e5-9149-cddb6e1ed71b/storage_v2/_src_/schema/ebook_bbs.QhWB9g.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0a8ddb2c-56c8-43e5-9149-cddb6e1ed71b/storage_v2/_src_/schema/ebook_bbs.QhWB9g.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/dao/impl/CommentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/dao/impl/CommentDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/utils/DataBaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/utils/DataBaseUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/indexTop.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/indexTop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,18 +39,8 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Java\maven\apache-maven-3.6.3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="MavenRunner">
     <option name="jreName" value="#JAVA_HOME" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1m5PcjtrlI0U4UtyoteIF6L0Lhb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -75,7 +60,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.14" />
     <property name="project.structure.side.proportion" value="0.33636364" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -92,17 +77,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -300,12 +274,10 @@
       <workItem from="1608820957618" duration="1105000" />
       <workItem from="1608822288893" duration="2835000" />
       <workItem from="1608877191318" duration="16000" />
-      <workItem from="1608892390603" duration="8440000" />
-      <workItem from="1608901020176" duration="75000" />
-      <workItem from="1608901113811" duration="213000" />
-      <workItem from="1608904230625" duration="6603000" />
-      <workItem from="1608953271197" duration="2632000" />
-      <workItem from="1608963350534" duration="1646000" />
+      <workItem from="1608892390603" duration="8220000" />
+      <workItem from="1608942299179" duration="2039000" />
+      <workItem from="1608945345547" duration="150000" />
+      <workItem from="1608945501767" duration="10843000" />
     </task>
     <task id="LOCAL-00001" summary="reset">
       <created>1608784559381</created>
@@ -363,12 +335,12 @@
       <option name="project" value="LOCAL" />
       <updated>1608888240266</updated>
     </task>
-    <task id="LOCAL-00009" summary="添加评论功能">
-      <created>1608900891436</created>
+    <task id="LOCAL-00009" summary="重构评论发送">
+      <created>1608962410254</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1608900891436</updated>
+      <updated>1608962410254</updated>
     </task>
     <option name="localTasksCounter" value="10" />
     <servers />
@@ -434,14 +406,10 @@
     <MESSAGE value="修改数据库接口" />
     <MESSAGE value="添加注册功能" />
     <MESSAGE value="添加登录功能" />
-    <MESSAGE value="添加评论功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加评论功能" />
+    <MESSAGE value="重构评论发送" />
+    <option name="LAST_COMMIT_MESSAGE" value="重构评论发送" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
