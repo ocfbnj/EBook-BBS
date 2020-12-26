@@ -157,7 +157,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <a href="/ebook/53222565/comments" target="_blank" class="lnk-more">更多评论 8</a>
+                        <a class="lnk-more" href="javascript:void(0)" id="more_comment"></a>
                         <div class="comment-content">
                             <div style="font-size: larger;">发布评论</div>
                             <textarea id="content" id="comment-text" style="width: 100%;height:90px;"></textarea>
@@ -335,29 +335,17 @@
 </div>
 
 <script>
-    function load(bid) {
-        // TODO 获得图书详情
+    const max_show_comment = 5;
+    let comm = $("#comments");
+    comm.html("");
 
-        // 获得评论
-        $.get("/ebook/getComments", {"bid": bid}, function (comments) {
-            console.log(comments);
+    function append_comment(comment) {
+        let content = comment["content"];
+        let date = comment["date"];
+        let username = comment["username"];
 
-            // 填充评论数
-            $("#comment_count").html(comments.length)
-
-            let comm = $("#comments");
-            comm.html("");
-
-            // 填充评论
-            for (let i = 0; i !== comments.length; i++) {
-                let comment = comments[i];
-
-                let content = comment["content"];
-                let date = comment["date"];
-                let username = comment["username"];
-
-                content = content.replace("\n", "<br/>");
-                let html = comm.html() + `
+        content = content.replace("\n", "<br/>");
+        let html = comm.html() + `
     <div class="inner">
         <div class="comment-item-header">
             <a class="lnk-avatar" href=""
@@ -394,12 +382,10 @@
         <div class="comment-actions">
             <div class="inner">
                 <div class="action-group">
-                    <!--点赞按钮-->
                     <a href="#" class="btn-contained btn-upvote require-login"
                        data-size="s">
                         <span class="count">0</span>
                     </a>
-                    <!--回复按钮-->
                     <a class="btn-contained btn-comment" href="" data-size="s">
                         <span class="count">0</span>
                     </a>
@@ -408,45 +394,78 @@
         </div>
     </div>
     `;
-                comm.html(html);
+        comm.html(html);
+    }
+
+    function load(bid) {
+        // TODO 获得图书详情
+
+        // 获得评论
+        $.get("/ebook/getComments", {"bid": bid}, function (comments) {
+            console.log(comments);
+
+            // 填充评论数
+            $("#comment_count").html(comments.length)
+
+            // 填充评论
+            // 每次最多显示@max_show_comment个
+            let i = 0;
+            for (; i !== max_show_comment; i++) {
+                let comment = comments[i];
+                append_comment(comment);
+            }
+
+            if (i === max_show_comment) {
+                let remain = comments.length - max_show_comment;
+                let more_comment = $("#more_comment");
+
+                more_comment.html("更多评论 " + remain);
+
+                more_comment.click(function () {
+                    more_comment.html("");
+
+                    for (let i = max_show_comment; i !== comments.length; i++) {
+                        append_comment(comments[i]);
+                    }
+                });
             }
         });
     }
 
-        $(function () {
-            const bid = getParameter("bid");
-            load(bid);
+    $(function () {
+        const bid = getParameter("bid");
+        load(bid);
 
-            $("#btn-comment").click(function () {
-                // 检查是否登录
-                $.get("/user/getUser", {}, function (user) {
-                    console.log(user);
-                    let res = check($("#content").val());
-                    if (user == null) {
-                        // 跳转到登录注册界面
-                        location = "/loginRegister.html";
-                    } else if (res === "") {
-                        //发送内容为空
+        $("#btn-comment").click(function () {
+            // 检查是否登录
+            $.get("/user/getUser", {}, function (user) {
+                console.log(user);
+                let res = check($("#content").val());
+                if (user == null) {
+                    // 跳转到登录注册界面
+                    location = "/loginRegister.html";
+                } else if (res === "") {
+                    //发送内容为空
 
-                    } else {
-                        // 发表评论
-                        let data = {
-                            "bid": bid,
-                            "uid": user["userID"],
-                            "content": $("#content").val()
-                        };
+                } else {
+                    // 发表评论
+                    let data = {
+                        "bid": bid,
+                        "uid": user["userID"],
+                        "content": $("#content").val()
+                    };
 
-                        $.post("/ebook/addComment", data, function (res) {
-                            if (res.flag) {
-                                location.reload();
-                            } else {
-                                // TODO 评论失败
-                            }
-                        });
-                    }
-                });
+                    $.post("/ebook/addComment", data, function (res) {
+                        if (res.flag) {
+                            location.reload();
+                        } else {
+                            // TODO 评论失败
+                        }
+                    });
+                }
             });
         });
+    });
 </script>
 <script>
     function check(chara) {
