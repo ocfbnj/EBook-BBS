@@ -167,7 +167,8 @@
 }
 
 .header-inner .user-info {
-    margin-right: 0
+    position: absolute;
+    right: 15px;
 }
 
 #header-container {
@@ -236,10 +237,11 @@
 }
 
 #header-compact-v3 .site-logo {
-    position: relative;
-    margin-top: 10px;
-    width: 117px;
-    background: url('../img/elogo.png') right top/117px auto no-repeat;
+    position: absolute;
+    left: 0px;
+    height: 50px;
+    width: 150px;
+    background: url('../img/elogo.png') right top/150px auto no-repeat;
     color: var(--grayBlack)
 }
 
