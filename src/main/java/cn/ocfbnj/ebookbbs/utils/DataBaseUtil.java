@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class DataBaseUtil {
     private static final BasicDataSource dataSource;
 
-    private static final String url = "jdbc:mysql://172.26.201.26:3306/ebook_bbs";
+    private static final String url = "jdbc:mysql://localhost:3306/ebook_bbs?serverTimezone=UTC";
     private static final String name = "root";
     private static final String pwd = "12345678";
 

@@ -356,58 +356,58 @@
                 let date = comment["date"];
                 let username = comment["username"];
 
+                content = content.replace("\n", "<br/>");
                 let html = comm.html() + `
-<div class="inner">
-    <div class="comment-item-header">
-        <a class="lnk-avatar" href=""
-           target="_self">
-            <div class="avatar avatar40 ">
-                <div class="inner" style="width: 40px; height: 40px; border-radius: 40px;margin-right: 8px;
-                background-image: url(img/user_normal.jpg); background-position: center center;
-                background-size: cover;">
+    <div class="inner">
+        <div class="comment-item-header">
+            <a class="lnk-avatar" href=""
+               target="_self">
+                <div class="avatar avatar40 ">
+                    <div class="inner" style="width: 40px; height: 40px; border-radius: 40px;margin-right: 8px;
+                    background-image: url(img/user_normal.jpg); background-position: center center;
+                    background-size: cover;">
+                    </div>
+                </div>
+            </a>
+            <div class="comment-user-info">
+                <div>
+                    <a class="comment-username"
+                       href="" target="_self">
+                        ` + username + `
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <span class="create-time">
+                            ` + date + `
+                        </span>
+                        <span>发表书评</span>
+                    </a>
                 </div>
             </div>
-        </a>
-        <div class="comment-user-info">
-            <div>
-                <a class="comment-username"
-                   href="" target="_self">
-                    ` + username + `
-                </a>
-            </div>
-            <div>
-                <a href="">
-                    <span class="create-time">
-                        ` + date + `
-                    </span>
-                    <span>发表书评</span>
-                </a>
+        </div>
+        <div class="comment-content">
+            <p><span class="Linkify">
+                ` + content + `
+            </span></p>
+        </div>
+        <div class="comment-actions">
+            <div class="inner">
+                <div class="action-group">
+                    <!--点赞按钮-->
+                    <a href="#" class="btn-contained btn-upvote require-login"
+                       data-size="s">
+                        <span class="count">0</span>
+                    </a>
+                    <!--回复按钮-->
+                    <a class="btn-contained btn-comment" href="" data-size="s">
+                        <span class="count">0</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="comment-content">
-        <p><span class="Linkify">
-            ` + content + `
-        </span></p>
-    </div>
-    <!--按键模块-->
-    <div class="comment-actions">
-        <div class="inner">
-            <div class="action-group">
-                <!--点赞按钮-->
-                <a href="#" class="btn-contained btn-upvote require-login"
-                   data-size="s">
-                    <span class="count">0</span>
-                </a>
-                <!--回复按钮-->
-                <a class="btn-contained btn-comment" href="" data-size="s">
-                    <span class="count">0</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-`;
+    `;
                 comm.html(html);
             }
         });
@@ -421,10 +421,13 @@
                 // 检查是否登录
                 $.get("/user/getUser", {}, function (user) {
                     console.log(user);
-
+                    let res = check($("#content").val());
                     if (user == null) {
                         // 跳转到登录注册界面
                         location = "/loginRegister.html";
+                    } else if (res === "") {
+                        //发送内容为空
+
                     } else {
                         // 发表评论
                         let data = {
@@ -444,6 +447,25 @@
                 });
             });
         });
+</script>
+<script>
+    function check(chara) {
+        let txt = "";
+        let flag = 0;
+        let i = 0;
+
+        while (((chara[i] === '\n') | (chara[i] === " ") && (i < chara.length)))
+            i++;
+
+        for (i; i < chara.length; i++) {
+            if (chara[i] !== ' ' | flag === 0) txt += chara[i];
+            if (chara[i] === ' ' && flag === 0)
+                flag = 1;
+            else
+                flag = 0;
+        }
+        return txt;
+    }
 </script>
 
 </body>
