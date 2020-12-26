@@ -12,6 +12,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class BasicServlet extends HttpServlet {
+    private static final long serialVersionUID = 7560237200720263402L;
+
     /**
      * 将obj序列化为JSON，然后写回客户端。
      *

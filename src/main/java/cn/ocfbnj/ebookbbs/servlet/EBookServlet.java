@@ -13,8 +13,10 @@ import java.util.List;
 
 @WebServlet("/ebook/*")
 public class EBookServlet extends BasicServlet {
-    CommentService commentService = new CommentServiceImpl();
-    ResultInfo resultInfo = new ResultInfo();
+    private static final long serialVersionUID = -6587895130609371116L;
+
+    private final CommentService commentService = new CommentServiceImpl();
+    private final ResultInfo resultInfo = new ResultInfo();
 
     public void getComments(HttpServletRequest req, HttpServletResponse resp) {
         String ebookID = req.getParameter("bid");

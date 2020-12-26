@@ -33,8 +33,10 @@ import java.util.Map;
  */
 @WebServlet("/user/*")
 public class UserServlet extends BasicServlet {
-    UserService userService = new UserServiceImpl();
-    ResultInfo resultInfo = new ResultInfo();
+    private static final long serialVersionUID = -6485794329215198178L;
+
+    private final UserService userService = new UserServiceImpl();
+    private final ResultInfo resultInfo = new ResultInfo();
 
     /**
      * 生成验证码并发送给客户端。
