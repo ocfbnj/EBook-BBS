@@ -1,1 +1,6 @@
 target
+
+# exclude eclipse peoject configuration.
+.classpath
+.project
+org.eclipse.*
