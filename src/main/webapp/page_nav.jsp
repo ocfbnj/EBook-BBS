@@ -64,7 +64,7 @@
                 <li><a class="page active">${i}</a></li>
             </c:if>
             <c:if test="${i != requestScope.page.pageNo}">
-                <li><a class="page" href="http://localhost:8080/${requestScope.page.url}?pageNo=${i}">${i}</a></li>
+                <li><a class="page" href="${requestScope.page.url}?pageNo=${i}">${i}</a></li>
             </c:if>
         </c:forEach>
 

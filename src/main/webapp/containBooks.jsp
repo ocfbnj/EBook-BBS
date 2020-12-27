@@ -15,12 +15,12 @@
     <title>乐源阅读</title>
 
     <%
-        String basePath = request.getScheme()
+        String basePath = /*request.getScheme()
                 + "://"
                 + request.getServerName()
                 + ":"
                 + request.getServerPort()
-                + request.getContextPath()
+                + */request.getContextPath()
                 + "/";
     %>
 
