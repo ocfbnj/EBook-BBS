@@ -48,24 +48,50 @@ call register_user('Alice', '123456',
 -- 图书表
 create table ebook
 (
-    ebook_id   int primary key auto_increment,
-    cover_path varchar(128) not null,
-    title      varchar(32)  not null,
-    author     varchar(16)  not null,
-    classify   varchar(32)  not null,
-    price      decimal      not null,
-    intro      text         not null
+    ebook_id      int primary key auto_increment,
+    cover_path    varchar(128) not null,
+    title         varchar(32)  not null,
+    author        varchar(16)  not null,
+    classify      varchar(32)  not null,
+    price         decimal      not null,
+    intro         text         not null,
+    download_path varchar(32)
 );
 
+delimiter ;;
+
+create procedure add_ebook(in cover_path_ varchar(128),
+                           in title_ varchar(32),
+                           in author_ varchar(16),
+                           in classify_ varchar(32),
+                           in price_ decimal,
+                           in intro_ text)
+begin
+    insert into ebook (cover_path, title, author, classify, price, intro)
+    values (cover_path_, title_, author_, classify_, price_, intro_);
+end ;;
+
+create procedure add_ebook_with_id(in ebook_id_ int, in cover_path_ varchar(128),
+                                   in title_ varchar(32),
+                                   in author_ varchar(16),
+                                   in classify_ varchar(32),
+                                   in price_ decimal,
+                                   in intro_ text)
+begin
+    insert into ebook (ebook_id, cover_path, title, author, classify, price, intro)
+    values (ebook_id_, cover_path_, title_, author_, classify_, price_, intro_);
+end ;;
+
+delimiter ;
+
 -- 测试数据
-insert into ebook (cover_path, title, author, classify, price, intro)
-VALUES ('img/1.jpg', '小风暴1.0', '肖茉莉', '小说', 36,
-        '献给青春，献给你！
-        一部本土创投、金融精英的成长爱恨、职场奋斗史！
-        本书在大时代的背景下，以金融才子高山、创投猎手秦沃为两条主线，情节围绕外交人才许信、律师木心喜、创业者谷东等年轻人的职场、创业、爱恨情仇展开。
-        在近20年里，经历了“9•11”、非典疫情、全球金融危机、大众创业浪潮等时代大事件的一代人，也从青涩的少年，成长为职场的精英，甚至成为当下中国创业浪潮支柱、搅动国内经济波澜的主力。本书中主人公们，正是这样一群弄潮儿。
-        他们站在时代的最前端，各自背负自己的梦想与爱恨，离开象牙塔，逐步去领悟职场规则，练就安身立命之本领，在金融、法律、创业等职业圈中，逐步成为年轻人中的佼佼者。
-        每个人都在大时代里，创造自己的小风暴。这是一部年轻人的奋斗史，更是一类人对爱、梦想与青春交出的答卷。');
+call add_ebook('img/1.jpg', '小风暴1.0', '肖茉莉', '小说', 36,
+               '献给青春，献给你！
+               一部本土创投、金融精英的成长爱恨、职场奋斗史！
+               本书在大时代的背景下，以金融才子高山、创投猎手秦沃为两条主线，情节围绕外交人才许信、律师木心喜、创业者谷东等年轻人的职场、创业、爱恨情仇展开。
+               在近20年里，经历了“9•11”、非典疫情、全球金融危机、大众创业浪潮等时代大事件的一代人，也从青涩的少年，成长为职场的精英，甚至成为当下中国创业浪潮支柱、搅动国内经济波澜的主力。本书中主人公们，正是这样一群弄潮儿。
+               他们站在时代的最前端，各自背负自己的梦想与爱恨，离开象牙塔，逐步去领悟职场规则，练就安身立命之本领，在金融、法律、创业等职业圈中，逐步成为年轻人中的佼佼者。
+               每个人都在大时代里，创造自己的小风暴。这是一部年轻人的奋斗史，更是一类人对爱、梦想与青春交出的答卷。');
 
 -- 评论
 create table comment

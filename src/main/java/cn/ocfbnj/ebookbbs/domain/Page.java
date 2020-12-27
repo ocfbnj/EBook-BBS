@@ -3,7 +3,7 @@ package cn.ocfbnj.ebookbbs.domain;
 import java.util.List;
 
 public class Page<T> {
-    public static final Integer PAGE_SIZE = 4;
+    public static final Integer PAGE_SIZE = 20;
     //当前页码
     private Integer pageNo;
     //当前页显示数量
