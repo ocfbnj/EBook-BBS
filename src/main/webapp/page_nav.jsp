@@ -27,9 +27,7 @@
     </c:when>
 </c:choose>
 <div class="paginator-full">
-    <!--TODO: 用代码修改这部分-->
     <ul>
-
         <%--上一页--%>
         <%--如果已经是第一页，则上一页显示为灰色--%>
         <c:if test="${requestScope.page.pageNo <= 1}">
@@ -96,9 +94,5 @@
                 </a>
             </li>
         </c:if>
-
-
-    </ul>
-
     </ul>
 </div>
