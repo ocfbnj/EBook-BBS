@@ -45,7 +45,7 @@
             <div class="filter-main">
                 <!--页面标题-->
                 <section class="section-container">
-                    <div class="category-breadcrumbs"><span class="breadcrumb">中文出版</span></div>
+                    <div class="category-breadcrumbs"><span class="breadcrumb">为您推荐</span></div>
                 </section>
 
                 <!--分类-->
@@ -141,6 +141,13 @@
                                             <!--图书简介-->
                                             <div class="intro null">
                                                 <span class="">${book.intro}</span>
+                                            </div>
+                                                <%--价格--%>
+                                            <div class="actions">
+                                                <div class="actions-left"><span class="sale"><span
+                                                        class="discount-price"
+                                                        data-is-free="false">
+                                                    <span class="rmb-tag ">￥</span>${book.price}</span></span></div>
                                             </div>
                                         </div>
                                     </div>
