@@ -9,15 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ff268c8-1088-4ca0-a76d-13f5685fc6a5" name="Default Changelist" comment="使用python获取图书封面">
+    <list default="true" id="1ff268c8-1088-4ca0-a76d-13f5685fc6a5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/dao/impl/BookDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/dao/impl/BookDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/service/impl/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/BookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/BookServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/EBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/EBookServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ebook_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ebook_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/loginRegister.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/loginRegister.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -329,7 +323,7 @@
       <workItem from="1608991655405" duration="3224000" />
       <workItem from="1609054836296" duration="595000" />
       <workItem from="1609058761387" duration="1591000" />
-      <workItem from="1609063175436" duration="2850000" />
+      <workItem from="1609063175436" duration="3288000" />
     </task>
     <task id="LOCAL-00001" summary="reset">
       <created>1608784559381</created>
@@ -422,7 +416,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609060533201</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="添加获取图书简介">
+      <created>1609066203867</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1609066203867</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +492,8 @@
     <MESSAGE value="添加展开评论" />
     <MESSAGE value="初步将主页整合完成，点击主页图书获取图书id，并跳转到详情页" />
     <MESSAGE value="使用python获取图书封面" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用python获取图书封面" />
+    <MESSAGE value="添加获取图书简介" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加获取图书简介" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

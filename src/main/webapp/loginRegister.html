@@ -119,7 +119,7 @@
                         //resp: {flag: false, errorMessage: ''}
                         if (resp.flag) {
                             $("#register_message").html("");
-                            location = "/";
+                            history.back();
                         } else {
                             $("#register_message").html(resp.errorMessage);
                         }
@@ -157,7 +157,7 @@
                         //resp: {flag: false, errorMessage: ''}
                         if (resp.flag) {
                             $("#login_message").html("");
-                            location = "/";
+                            history.back();
                         } else {
                             $("#login_message").html(resp.errorMessage);
                         }
