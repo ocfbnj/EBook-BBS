@@ -13,4 +13,7 @@ public interface BookDao {
 
     //按价格查询结果集
     List<Book> queryForPageItemsByPrice(int begin, int pageSize);
+
+    // 查询一本图书
+    Book queryByID(int bid);
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>小风暴1.0 - 肖茉莉 </title>
+    <title id="title">小风暴1.0 - 肖茉莉 </title>
 
     <link rel="stylesheet" href="css/innerother.css">
     <link rel="stylesheet" href="css/inner.css">
@@ -27,23 +27,23 @@
             <div class="article-profile-section article-profile-primary ">
                 <!--图书封面-->
                 <div class="cover shadow-cover">
-                    <img height="209px" src="img/1.jpg" width="140px"
+                    <img height="209px" id="book_cover" src="img/1.jpg" width="140px"
                          alt="小风暴1.0" itemprop="image">
                 </div>
                 <!--图书描述-->
                 <div class="article-profile-bd">
-                    <h1 itemprop="name" class="article-title">小风暴1.0</h1>
+                    <h1 class="article-title" id="book_title" itemprop="name">小风暴1.0</h1>
                     <div class="article-meta" style="margin-top: 20px">
                         <p class="author"><span class="label">作者</span>
                             <span class="labeled-text">
-                                <a class="author-item"
+                                <a class="author-item" id="book_author"
                                    href="/search?q=%E8%82%96%E8%8C%89%E8%8E%89">肖茉莉</a>
                             </span>
                         </p>
                         <p class="category">
                             <span class="label">类别</span>
                             <span class="labeled-text"> </span>
-                            <span temprop="genre"> 出版 / 虚构 </span>
+                            <span id="book_classify" temprop="genre"> 出版 / 虚构 </span>
                         </p>
                         <p class=""><span class="label">出版社</span><span class="labeled-text"><span>中信出版社</span>&nbsp;/&nbsp;<span>2016-08</span></span>
                         </p>
@@ -77,17 +77,17 @@
                     <div class="hd">
                         <h3>作品简介</h3>
                     </div>
-                    <div itemprop="description" data-max-lines="3" data-line-height="24" style="max-height: 71px;"
+                    <div data-line-height="24" data-max-lines="3" id="mask" itemprop="description"
+                         style="max-height: 71px;"
                          class="bd abstract-full collapse-content">
-                        <div class="info">
+                        <div class="info" id="book_intro">
                             <p>献给青春，献给你！</p>
                             <p>一部本土创投、金融精英的成长爱恨、职场奋斗史！</p>
                             <p>本书在大时代的背景下，以金融才子高山、创投猎手秦沃为两条主线，情节围绕外交人才许信、律师木心喜、创业者谷东等年轻人的职场、创业、爱恨情仇展开。</p>
-
                         </div>
                     </div>
                     <div class="expand-collapsed-content">
-                        <a href="#" data-action="expand">展开全部</a>
+                        <a data-action="expand" href="javascript:void(0)" id="expand">展开全部</a>
                     </div>
                 </section>
 
@@ -398,10 +398,36 @@
     }
 
     function load(bid) {
-        // TODO 获得图书详情
+        let data = {"bid": bid};
+
+        // 获得图书详情
+        $.get("/ebook/getBook", data, function (book) {
+            // 修改标题
+            $("#title").html(book.title);
+
+            // 修改图书信息
+            $("#book_title").html(book.title);
+            $("#book_cover").attr("src", book.cover_path);
+            $("#book_cover").attr("alt", book.title);
+            $("#book_author").html(book.author.length ? book.author : "未知");
+            $("#book_classify").html(book.classify)
+
+            // 修改简介
+            let intro = $("#book_intro");
+            let intro_html = "";
+
+            let paragraphs = book.intro.split("\n");
+            for (const paragraph of paragraphs) {
+                if (paragraph.length) {
+                    intro_html += `<p>` + paragraph + `</p>`;
+                }
+            }
+
+            intro.html(intro_html);
+        });
 
         // 获得评论
-        $.get("/ebook/getComments", {"bid": bid}, function (comments) {
+        $.get("/ebook/getComments", data, function (comments) {
             console.log(comments);
 
             // 填充评论数
@@ -464,6 +490,12 @@
                     });
                 }
             });
+        });
+
+        // 更多介绍
+        $("#expand").click(function () {
+            $("#expand").parent().html("");
+            $("#mask").css("max-height", "");
         });
     });
 </script>

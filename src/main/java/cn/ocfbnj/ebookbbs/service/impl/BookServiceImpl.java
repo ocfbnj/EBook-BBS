@@ -66,4 +66,9 @@ public class BookServiceImpl implements BookService {
         return page;
     }
 
+    @Override
+    public Book getBook(int bid) {
+        return bookDao.queryByID(bid);
+    }
+
 }

@@ -30,5 +30,9 @@ public class BookDaoImpl extends OutBaseDao implements BookDao {
         return queryForList(sql, Book.class, begin, pageSize);
     }
 
-
+    @Override
+    public Book queryByID(int bid) {
+        String sql = "select * from ebook where ebook_id=?";
+        return queryForOne(sql, Book.class, bid);
+    }
 }

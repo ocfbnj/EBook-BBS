@@ -49,5 +49,4 @@ public class BookServlet extends BasicServlet {
         //请求转发到显示页面
         req.getRequestDispatcher("/containBooks.jsp").forward(req, resp);
     }
-
 }
