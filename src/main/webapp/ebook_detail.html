@@ -360,7 +360,6 @@
     function load(bid) {
         let data = {"bid": bid};
 
-
         // 获得图书详情
         $.get("/ebook/getBook", data, function (book) {
             // 修改标题
@@ -395,7 +394,7 @@
             $("#comment_count").html(comments.length)
 
             // 填充评论
-            // 每次最多显示@max_show_comment个
+            // 每次最多显示max_show_comment个
             let i = 0;
             for (; i !== max_show_comment; i++) {
                 let comment = comments[i];
@@ -440,7 +439,7 @@
                     // 发表评论
                     let data = {
                         "bid": bid,
-                        "uid": user["userID"],
+                        "uid": user["user_id"],
                         "content": $("#content").val()
                     };
 

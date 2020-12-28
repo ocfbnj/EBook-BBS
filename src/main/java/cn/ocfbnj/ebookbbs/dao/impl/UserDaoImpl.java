@@ -13,7 +13,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
         if (resultSet.next()) {
             User user = new User();
 
-            user.setUserID(resultSet.getInt("user_id"));
+            user.setUser_id(resultSet.getInt("user_id"));
             user.setUsername(resultSet.getString("username"));
             user.setPassword(resultSet.getString("password"));
             user.setName(resultSet.getString("name"));
@@ -21,7 +21,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
             user.setAge(resultSet.getInt("age"));
             user.setPhone(resultSet.getString("phone"));
             user.setEmail(resultSet.getString("email"));
-            user.setCreatTime(new Date(resultSet.getDate("create_time").getTime()));
+            user.setCreat_time(new Date(resultSet.getDate("create_time").getTime()));
 
             return user;
         }

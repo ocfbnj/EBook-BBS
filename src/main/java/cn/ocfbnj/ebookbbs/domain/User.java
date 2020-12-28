@@ -4,7 +4,7 @@ package cn.ocfbnj.ebookbbs.domain;
 import java.util.Date;
 
 public class User {
-    private int userID;
+    private int user_id;
     private String username;
     private String password;
     private String name;
@@ -12,14 +12,14 @@ public class User {
     private int age;
     private String phone;
     private String email;
-    private Date creatTime;
+    private Date creat_time;
 
-    public int getUserID() {
-        return userID;
+    public int getUser_id() {
+        return user_id;
     }
 
-    public void setUserID(int userID) {
-        this.userID = userID;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
     public String getUsername() {
@@ -78,18 +78,18 @@ public class User {
         this.email = email;
     }
 
-    public java.util.Date getCreatTime() {
-        return creatTime;
+    public java.util.Date getCreat_time() {
+        return creat_time;
     }
 
-    public void setCreatTime(Date creatTime) {
-        this.creatTime = creatTime;
+    public void setCreat_time(Date creat_time) {
+        this.creat_time = creat_time;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "userID=" + userID +
+                "userID=" + user_id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
@@ -97,7 +97,7 @@ public class User {
                 ", age='" + age + '\'' +
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
-                ", creatTime='" + creatTime + '\'' +
+                ", creatTime='" + creat_time + '\'' +
                 '}';
     }
 }
