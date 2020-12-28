@@ -18,7 +18,6 @@ public class BookServlet extends BasicServlet {
 
     //分页
     public void page(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         //获取请求的参数pageNo 和 pageSize;如果没有传入，第一次访问则默认是展示第一页
         int pageNo = WebUtils.parseInt(req.getParameter("pageNo"), 1);
         //如果没有传入页数的参数，则默认显示Page.PAGE_SIZE

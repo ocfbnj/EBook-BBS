@@ -20,16 +20,20 @@ public class PdfServlet extends BasicServlet {
         System.out.println("success:" + bid);
         String s0 = "E:/file/eff.pdf";
         Book book = new BookServiceImpl().getBook(bid);
-        String bookPath = book.getDownloadPath();
+        String bookPath = book.getDownload_path();
         if (bookPath != null) {
             s0 = bookPath;
         }
         System.out.println(s0);
         //跨域请求
-
         resp.setHeader("Access-Control-Allow-Origin", "*");
-        File file = new File(s0);
+
+        String baseEBookPath = System.getenv("EBOOK_PDF_PATH");
+        System.out.println(baseEBookPath + s0);
+
+        File file = new File(baseEBookPath + s0);
         resp.setContentLength((int) file.length());
+
         try {
             resp.setHeader("Content-Disposition", "attachment;filename=" + URLEncoder.encode(file.getName(), "UTF-8"));
             // 设置在下载框默认显示的文件名

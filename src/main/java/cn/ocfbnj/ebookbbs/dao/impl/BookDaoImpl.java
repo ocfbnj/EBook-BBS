@@ -39,7 +39,7 @@ public class BookDaoImpl extends OutBaseDao implements BookDao {
 
     @Override
     public List<Book> queryForPageItemsByDownload(int begin, int pageSize) {
-        String sql = "select * from ebook where classify = '计算机科学与技术' limit ? ,?";
+        String sql = "select * from ebook where classify = '计算机科学' limit ? ,?";
         System.out.println(begin + ":" + pageSize);
         return queryForList(sql, Book.class, begin, pageSize);
     }

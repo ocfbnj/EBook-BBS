@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title id="title">小风暴1.0 - 肖茉莉 </title>
+    <title id="title"></title>
 
     <link rel="stylesheet" href="css/innerother.css">
     <link rel="stylesheet" href="css/inner.css">
@@ -22,30 +22,30 @@
     <div id="header"></div>
 
     <!--页面主体-->
-    <div class="main" itemscope="" itemtype="http://schema.org/Book" itemprop="mainEntity" style="margin-top: 10px;">
+    <div class="main" itemprop="mainEntity" itemscope="" style="margin-top: 10px;">
         <div class="col col9 app-article">
             <div class="article-profile-section article-profile-primary ">
                 <!--图书封面-->
                 <div class="cover shadow-cover">
-                    <img height="209px" id="book_cover" src="img/1.jpg" width="140px"
-                         alt="小风暴1.0" itemprop="image">
+                    <img alt="封面" height="209px" id="book_cover" itemprop="image"
+                         src="" width="140px">
                 </div>
                 <!--图书描述-->
                 <div class="article-profile-bd">
-                    <h1 class="article-title" id="book_title" itemprop="name">小风暴1.0</h1>
+                    <h1 class="article-title" id="book_title" itemprop="name"></h1>
                     <div class="article-meta" style="margin-top: 20px">
                         <p class="author"><span class="label">作者</span>
                             <span class="labeled-text">
                                 <a class="author-item" id="book_author"
-                                   href="/search?q=%E8%82%96%E8%8C%89%E8%8E%89">肖茉莉</a>
+                                   href="javascript:void(0)">未知</a>
                             </span>
                         </p>
                         <p class="category">
                             <span class="label">类别</span>
                             <span class="labeled-text"> </span>
-                            <span id="book_classify" temprop="genre"> 出版 / 虚构 </span>
+                            <span id="book_classify" temprop="genre">未知</span>
                         </p>
-                        <p class=""><span class="label">出版社</span><span class="labeled-text"><span>中信出版社</span>&nbsp;/&nbsp;<span>2016-08</span></span>
+                        <p class=""><span class="label">出版社</span><span class="labeled-text">未知</span>
                         </p>
                     </div>
 
@@ -56,7 +56,7 @@
                         <span class="amount">353 次</span>
                         <span class="labeled-text" style="margin-left: 20px">
                                 <a class="download" id="down"
-                                   href="">点击下载</a>
+                                   href="javascript:void(0)">点击下载</a>
                         </span>
                     </div>
 
@@ -75,9 +75,9 @@
 
                         function read() {
                             // 点击调用预览方法
-                            let previewURL = "http://localhost:8080/";
+                            let previewURL = "/";
                             // previewURL="127.0.0.1:8080/";
-                            getParameter("bid")
+                            getParameter("bid");
                             window.open('../pdfjs/web/viewer.html?file=' + encodeURIComponent(previewURL + "pdf/read?bid=" + getParameter("bid")));
                         }
                     </script>
@@ -96,9 +96,6 @@
                          style="max-height: 71px;"
                          class="bd abstract-full collapse-content">
                         <div class="info" id="book_intro">
-                            <p>献给青春，献给你！</p>
-                            <p>一部本土创投、金融精英的成长爱恨、职场奋斗史！</p>
-                            <p>本书在大时代的背景下，以金融才子高山、创投猎手秦沃为两条主线，情节围绕外交人才许信、律师木心喜、创业者谷东等年轻人的职场、创业、爱恨情仇展开。</p>
                         </div>
                     </div>
                     <div class="expand-collapsed-content">
@@ -119,67 +116,15 @@
 
                             <!--单评论模块 -->
                             <li class="comment-item" id="comments">
-                                <div class="inner">
-                                    <!--用户信息 -->
-                                    <div class="comment-item-header">
-                                        <a class="lnk-avatar" href=""
-                                           target="_self">
-                                            <div class="avatar avatar40 ">
-                                                <div class="inner" style="width: 40px; height: 40px; border-radius: 40px;margin-right: 8px;
-                                                background-image: url(img/user_normal.jpg); background-position: center center;
-                                                background-size: cover;">
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <!--用户姓名 -->
-                                        <div class="comment-user-info">
-                                            <div>
-                                                <a class="comment-username"
-                                                   href="" target="_self">
-                                                    蓝蓝与鱼
-                                                </a>
-                                            </div>
-
-                                            <!--发布评论时间-->
-                                            <div>
-                                                <a href="">
-                                                    <span class="create-time">12-19</span>
-                                                    <span>发表书评</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--评论文本内容-->
-                                    <div class="comment-content">
-                                        <p><span class="Linkify">年代感好强，看的我觉得很尴尬</span></p>
-                                    </div>
-                                    <!--按键模块-->
-                                    <div class="comment-actions">
-                                        <div class="inner">
-                                            <div class="action-group">
-                                                <!--点赞按钮-->
-                                                <a href="#" class="btn-contained btn-upvote require-login"
-                                                   data-size="s">
-                                                    <span class="count">0</span>
-                                                </a>
-                                                <!--回复按钮-->
-                                                <a class="btn-contained btn-comment" href="" data-size="s">
-                                                    <span class="count">0</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </li>
                         </ul>
                         <a class="lnk-more" href="javascript:void(0)" id="more_comment"></a>
                         <div class="comment-content">
                             <div style="font-size: larger;">发布评论</div>
-                            <textarea id="content" id="comment-text" style="width: 100%;height:90px;"></textarea>
+                            <textarea id="content" style="width: 100%;height:90px;"></textarea>
                             <button class="btn-contained btn-comment" id="btn-comment"
                                     style="float: right;margin-top: 8px;">发表
                             </button>
-
                         </div>
 
                     </div>

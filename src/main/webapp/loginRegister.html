@@ -20,72 +20,74 @@
     </a>
 </div>
 
-<div class="content">
-    <!-- 登录 -->
-    <div class="form sign-in">
-        <h2>欢迎回来</h2>
-        <label>
-            <span>用户名</span>
-            <input id="login_username" type="email"/>
-        </label>
-        <label>
-            <span>密码</span>
-            <input id="login_password" type="password"/>
-        </label>
-        <label>
-            <span>验证码</span>
-            <input id="login_code" name="check_code" type="text"/>
-            <img alt="验证码" onclick="this.src='/user/imgInit?id='+Math.random();"
-                 src="/user/imgInit" style="margin-top: 10px;">
-        </label>
-        <!--        <p class="forgot-pass"><a href="javascript:" id="login_message">请输入邮箱和密码</a></p>-->
-
-        <button class="submit" id="login_btn" type="button">登 录</button>
-
-        <p class="forgot-pass"><a href="javascript:" id="login_message">请输入邮箱和密码</a></p>
-        <!-- <button type="button" class="fb-btn">使用 <span>facebook</span> 帐号登录</button> -->
-    </div>
-
-    <div class="sub-cont">
-        <!-- 侧边图 -->
-        <div class="img">
-            <div class="img__text m--up">
-                <h2>还未注册？</h2>
-                <p>立即注册，发现好书！</p>
-            </div>
-            <div class="img__text m--in">
-                <h2>已有帐号？</h2>
-                <p>有帐号就登录吧，好久不见了！</p>
-            </div>
-            <div class="img__btn">
-                <span class="m--up">注 册</span>
-                <span class="m--in">登 录</span>
-            </div>
-        </div>
-
-        <!-- 注册 -->
-        <div class="form sign-up">
-            <h2>立即注册</h2>
+<div>
+    <div class="content" style="position: relative; margin-top: 4%">
+        <!-- 登录 -->
+        <div class="form sign-in">
+            <h2>欢迎回来</h2>
             <label>
                 <span>用户名</span>
-                <input id="register_username" type="text"/>
-            </label>
-            <label>
-                <span>邮箱</span>
-                <input id="register_email" type="text"/>
+                <input id="login_username" type="email"/>
             </label>
             <label>
                 <span>密码</span>
-                <input id="register_password" type="password"/>
+                <input id="login_password" type="password"/>
             </label>
             <label>
                 <span>验证码</span>
-                <input id="register_code" name="check_code" type="text"/>
+                <input id="login_code" name="check_code" type="text"/>
                 <img alt="验证码" onclick="this.src='/user/imgInit?id='+Math.random();"
                      src="/user/imgInit" style="margin-top: 10px;">
             </label>
-            <button class="submit" id="register_btn" type="button">注 册</button>
-            <p class="forgot-pass"><a href="javascript:" id="register_message"></a></p>
+            <!--        <p class="forgot-pass"><a href="javascript:" id="login_message">请输入邮箱和密码</a></p>-->
+
+            <button class="submit" id="login_btn" type="button">登 录</button>
+
+            <p class="forgot-pass"><a href="javascript:" id="login_message">请输入邮箱和密码</a></p>
+            <!-- <button type="button" class="fb-btn">使用 <span>facebook</span> 帐号登录</button> -->
+        </div>
+
+        <div class="sub-cont">
+            <!-- 侧边图 -->
+            <div class="img">
+                <div class="img__text m--up">
+                    <h2>还未注册？</h2>
+                    <p>立即注册，发现好书！</p>
+                </div>
+                <div class="img__text m--in">
+                    <h2>已有帐号？</h2>
+                    <p>有帐号就登录吧，好久不见了！</p>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up">注 册</span>
+                    <span class="m--in">登 录</span>
+                </div>
+            </div>
+
+            <!-- 注册 -->
+            <div class="form sign-up">
+                <h2>立即注册</h2>
+                <label>
+                    <span>用户名</span>
+                    <input id="register_username" type="text"/>
+                </label>
+                <label>
+                    <span>邮箱</span>
+                    <input id="register_email" type="text"/>
+                </label>
+                <label>
+                    <span>密码</span>
+                    <input id="register_password" type="password"/>
+                </label>
+                <label>
+                    <span>验证码</span>
+                    <input id="register_code" name="check_code" type="text"/>
+                    <img alt="验证码" onclick="this.src='/user/imgInit?id='+Math.random();"
+                         src="/user/imgInit" style="margin-top: 10px;">
+                </label>
+                <button class="submit" id="register_btn" type="button">注 册</button>
+                <p class="forgot-pass"><a href="javascript:" id="register_message"></a></p>
+            </div>
         </div>
     </div>
 </div>
