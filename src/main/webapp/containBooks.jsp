@@ -59,10 +59,13 @@
                                     <div class="sort-selector" id="clasi">
                                         <%--                                        <a class="sort-option selected">小说</a>--%>
                                         <%--                                        <a class="sort-option ">文学</a>--%>
-                                            <a class="sort-option" href="bookServlet/page" id="default">默认</a>
-                                            <a class="sort-option " href="bookServlet/pageByPrice" id="price">价格从低到高</a>
-                                            <a class="sort-option " href="bookServlet/pageByDownload" id="download">计算机科学与技术</a>
-                                            <%--                                        <a class="sort-option">科技科普</a>--%>
+                                        <a class="sort-option" href="bookServlet/page" id="default">默认</a>
+                                        <a class="sort-option " href="bookServlet/pageByPrice" id="price">价格从低到高</a>
+                                        <a class="sort-option " href="bookServlet/pageByClassify?classify=0" id="novel">小说</a>
+                                        <a class="sort-option " href="bookServlet/pageByClassify?classify=1" id="know">世界名著</a>
+                                        <a class="sort-option " href="bookServlet/pageByClassify?classify=2"
+                                           id="download">计算机科学与技术</a>
+                                        <%--                                        <a class="sort-option">科技科普</a>--%>
                                         <%--                                        <a class="sort-option ">计算机与互联网</a>--%>
                                         <%--                                        <a class="sort-option ">漫画和绘本</a>--%>
                                     </div>
@@ -82,8 +85,8 @@
                         //     $(this).addClass("selected");
                         // });
                         // uri.substring(uri.lastIndexOf('/') + 1);
-                        var s = window.location.href;
-                        s = s.substring(s.lastIndexOf('/') + 1);
+                        var rs = window.location.href;
+                        s = rs.substring(rs.lastIndexOf('/') + 1);
                         if (s == '') {
                             $("#default").addClass("selected");
                         } else {
@@ -93,8 +96,15 @@
                                 $("#price").addClass("selected");
                             } else if (s == "page") {
                                 $("#default").addClass("selected");
-                            } else if (s == "pageByDownload") {
-                                $("#download").addClass("selected")
+                            } else if (s == "pageByClassify") {
+                                let classify = rs.substring(rs.lastIndexOf('=') + 1);
+                                if (classify == 0) {
+                                    $("#novel").addClass("selected");
+                                } else if (classify == 1) {
+                                    $("#know").addClass("selected");
+                                } else if (classify == 2) {
+                                    $("#download").addClass("selected");
+                                }
                             }
                         }
 

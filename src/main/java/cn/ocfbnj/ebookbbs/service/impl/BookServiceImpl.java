@@ -66,13 +66,26 @@ public class BookServiceImpl implements BookService {
         return page;
     }
 
+    public static void main(String[] args) {
+        BookService bookService = new BookServiceImpl();
+        Book book = bookService.getBook(2);
+        System.out.println(book.toString());
+
+    }
+
     @Override
-    public Page<Book> pageByDownload(int pageNo, int pageSize) {
+    public Book getBook(int bid) {
+        return bookDao.queryByID(bid);
+    }
+
+    @Override
+    public Page<Book> pageByClassify(String classify, int pageNo, int pageSize) {
+
         Page<Book> page = new Page<Book>();
         //设置每页显示的数量
         page.setPageSize(pageSize);
         //求总记录数和设置总记录数
-        Integer pageTotalCount = bookDao.queryForPageTotalCountDownload();
+        Integer pageTotalCount = bookDao.queryForPageTotalCountClassify(classify);
         page.setPageTotalCount(pageTotalCount);
         //求总页码并设置总页码
         Integer pageTotal = pageTotalCount / pageSize;
@@ -88,17 +101,10 @@ public class BookServiceImpl implements BookService {
         int begin = (page.getPageNo() - 1) * pageSize;
         //获取当前页数据
 
-        List<Book> item = bookDao.queryForPageItemsByDownload(begin, pageSize);
+        List<Book> item = bookDao.queryForPageItemsByClassify(classify, begin, pageSize);
         // 保存当前页数据
         page.setItems(item);
         return page;
     }
-
-    @Override
-    public Book getBook(int bid) {
-        return bookDao.queryByID(bid);
-    }
-
-
 
 }

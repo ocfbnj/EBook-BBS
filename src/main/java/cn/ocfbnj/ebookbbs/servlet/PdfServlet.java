@@ -18,7 +18,7 @@ public class PdfServlet extends BasicServlet {
     public void read(HttpServletRequest req, HttpServletResponse resp) {
         int bid = Integer.parseInt(req.getParameter("bid"));
         System.out.println("success:" + bid);
-        String s0 = "E:/file/eff.pdf";
+        String s0 = "ebook_pdf/2.pdf";
         Book book = new BookServiceImpl().getBook(bid);
         String bookPath = book.getDownload_path();
         if (bookPath != null) {
