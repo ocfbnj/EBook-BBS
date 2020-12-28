@@ -1,5 +1,8 @@
 package cn.ocfbnj.ebookbbs.servlet;
 
+import cn.ocfbnj.ebookbbs.domain.Book;
+import cn.ocfbnj.ebookbbs.service.impl.BookServiceImpl;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,9 +16,17 @@ import java.net.URLEncoder;
 public class PdfServlet extends BasicServlet {
 
     public void read(HttpServletRequest req, HttpServletResponse resp) {
-        System.out.println("success");
-        //跨域请求
+        int bid = Integer.parseInt(req.getParameter("bid"));
+        System.out.println("success:" + bid);
         String s0 = "E:/file/eff.pdf";
+        Book book = new BookServiceImpl().getBook(bid);
+        String bookPath = book.getDownloadPath();
+        if (bookPath != null) {
+            s0 = bookPath;
+        }
+        System.out.println(s0);
+        //跨域请求
+
         resp.setHeader("Access-Control-Allow-Origin", "*");
         File file = new File(s0);
         resp.setContentLength((int) file.length());

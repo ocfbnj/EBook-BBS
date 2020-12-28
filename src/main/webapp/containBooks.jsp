@@ -59,9 +59,10 @@
                                     <div class="sort-selector" id="clasi">
                                         <%--                                        <a class="sort-option selected">小说</a>--%>
                                         <%--                                        <a class="sort-option ">文学</a>--%>
-                                        <a class="sort-option" href="bookServlet/page" id="default">默认</a>
-                                        <a class="sort-option " href="bookServlet/pageByPrice" id="price">价格从低到高</a>
-                                        <%--                                        <a class="sort-option">科技科普</a>--%>
+                                            <a class="sort-option" href="bookServlet/page" id="default">默认</a>
+                                            <a class="sort-option " href="bookServlet/pageByPrice" id="price">价格从低到高</a>
+                                            <a class="sort-option " href="bookServlet/pageByDownload" id="download">计算机科学与技术</a>
+                                            <%--                                        <a class="sort-option">科技科普</a>--%>
                                         <%--                                        <a class="sort-option ">计算机与互联网</a>--%>
                                         <%--                                        <a class="sort-option ">漫画和绘本</a>--%>
                                     </div>
@@ -92,6 +93,8 @@
                                 $("#price").addClass("selected");
                             } else if (s == "page") {
                                 $("#default").addClass("selected");
+                            } else if (s == "pageByDownload") {
+                                $("#download").addClass("selected")
                             }
                         }
 

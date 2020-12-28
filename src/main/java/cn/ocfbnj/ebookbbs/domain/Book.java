@@ -14,6 +14,7 @@ public class Book {
     private Date issueTime;
     private String cover_path;
     private String classify;
+    private String downloadPath;
 
     public Integer getEbook_id() {
         return ebook_id;
@@ -95,6 +96,14 @@ public class Book {
         this.classify = classify;
     }
 
+    public String getDownloadPath() {
+        return downloadPath;
+    }
+
+    public void setDownloadPath(String downloadPath) {
+        this.downloadPath = downloadPath;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
@@ -108,6 +117,7 @@ public class Book {
                 ", issueTime=" + issueTime +
                 ", cover_path='" + cover_path + '\'' +
                 ", classify='" + classify + '\'' +
+                ", downloadPath='" + downloadPath + '\'' +
                 '}';
     }
 }

@@ -55,7 +55,7 @@
                         <span class="score">下载量：</span>
                         <span class="amount">353 次</span>
                         <span class="labeled-text" style="margin-left: 20px">
-                                <a class="download"
+                                <a class="download" id="down"
                                    href="">点击下载</a>
                         </span>
                     </div>
@@ -63,9 +63,24 @@
                     <!--TODO: 阅读点击事件触发-->
                     <!--阅读点击事件触发-->
                     <div class="profile-reading-actions ebook-profile">
-                        <a href="" target="_blank" data-variant="rect" data-size="l"
-                           class="btn btn-read "><span class="btn-text">开始阅读</span></a>
+                        <button class="btn btn-read " data-size="l" data-variant="rect"
+                                onclick="read()">
+                            开始阅读
+                        </button>
                     </div>
+                    <script>
+                        function down() {
+
+                        }
+
+                        function read() {
+                            // 点击调用预览方法
+                            let previewURL = "http://localhost:8080/";
+                            // previewURL="127.0.0.1:8080/";
+                            getParameter("bid")
+                            window.open('../pdfjs/web/viewer.html?file=' + encodeURIComponent(previewURL + "pdf/read?bid=" + getParameter("bid")));
+                        }
+                    </script>
                 </div>
             </div>
 
@@ -400,6 +415,7 @@
     function load(bid) {
         let data = {"bid": bid};
 
+
         // 获得图书详情
         $.get("/ebook/getBook", data, function (book) {
             // 修改标题
@@ -460,6 +476,8 @@
 
     $(function () {
         const bid = getParameter("bid");
+        let src = "pdf/read?bid=" + bid;
+        $("#down").attr("href", src);
         load(bid);
 
         $("#btn-comment").click(function () {

@@ -187,6 +187,7 @@ public class UserServlet extends BasicServlet {
         boolean ok = userService.register(user);
         if (ok) {
             resultInfo.setFlag(true);
+            req.getSession().setAttribute("user", user);
         } else {
             resultInfo.setFlag(false);
             resultInfo.setErrorMessage("注册失败");
