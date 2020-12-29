@@ -69,16 +69,16 @@
                         </button>
                     </div>
                     <script>
-                        function down() {
+                        let url;
 
+                        function loadUrl(download) {
+                            url = download;
                         }
 
                         function read() {
                             // 点击调用预览方法
-                            let previewURL = "/";
                             // previewURL="127.0.0.1:8080/";
-                            getParameter("bid");
-                            window.open('../pdfjs/web/viewer.html?file=' + encodeURIComponent(previewURL + "pdf/read?bid=" + getParameter("bid")));
+                            window.open('../pdfjs/web/viewer.html?file=' + encodeURIComponent(url));
                         }
                     </script>
                 </div>
@@ -364,13 +364,14 @@
         $.get("/ebook/getBook", data, function (book) {
             // 修改标题
             $("#title").html(book.title);
-
             // 修改图书信息
             $("#book_title").html(book.title);
             $("#book_cover").attr("src", book.cover_path);
             $("#book_cover").attr("alt", book.title);
             $("#book_author").html(book.author.length ? book.author : "未知");
-            $("#book_classify").html(book.classify)
+            $("#book_classify").html(book.classify);
+            $("#down").attr("href", book.download_path);
+            loadUrl(book.download_path);
 
             // 修改简介
             let intro = $("#book_intro");
@@ -420,8 +421,7 @@
 
     $(function () {
         const bid = getParameter("bid");
-        let src = "pdf/read?bid=" + bid;
-        $("#down").attr("href", src);
+
         load(bid);
 
         $("#btn-comment").click(function () {

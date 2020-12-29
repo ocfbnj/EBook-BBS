@@ -10,18 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ff268c8-1088-4ca0-a76d-13f5685fc6a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0a8ddb2c-56c8-43e5-9149-cddb6e1ed71b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0a8ddb2c-56c8-43e5-9149-cddb6e1ed71b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EBook_BBS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EBook_BBS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/book/ali.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ebook_pdf/ali.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/dao/impl/BookDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/dao/impl/BookDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/service/impl/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/BookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/BookServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/PdfServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/PdfServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/containBooks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/containBooks.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/EBookServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/EBookServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/PdfServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ebook_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ebook_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +89,7 @@
       <recent name="cn.ocfbnj.ebookbbs.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BookServiceImpl">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.41">
     <configuration name="BookServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cn.ocfbnj.ebookbbs.service.impl.BookServiceImpl" />
       <module name="EBook_BBS" />
@@ -150,15 +142,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -396,7 +386,8 @@
       <workItem from="1609153176438" duration="2696000" />
       <workItem from="1609159787802" duration="319000" />
       <workItem from="1609160112400" duration="5005000" />
-      <workItem from="1609165266904" duration="3635000" />
+      <workItem from="1609165266904" duration="8233000" />
+      <workItem from="1609199866966" duration="312000" />
     </task>
     <task id="LOCAL-00001" summary="reset">
       <created>1608784559381</created>
@@ -531,7 +522,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609151332493</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="主页添加的类别选择">
+      <created>1609168970318</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1609168970318</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,21 +605,11 @@
     <MESSAGE value="修改绝对路径为先对路径" />
     <MESSAGE value="修改请求绝对路径为相对路径" />
     <MESSAGE value="修改路径为相对路径" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改路径为相对路径" />
+    <MESSAGE value="主页添加的类别选择" />
+    <option name="LAST_COMMIT_MESSAGE" value="主页添加的类别选择" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/ocfbnj/ebookbbs/servlet/BasicServlet.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XPathView.XPathProjectComponent">
     <history />
