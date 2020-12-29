@@ -12,6 +12,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class BasicServlet extends HttpServlet {
+    /**
+     * @see java.io.Serializable
+     */
     private static final long serialVersionUID = 7560237200720263402L;
 
     /**

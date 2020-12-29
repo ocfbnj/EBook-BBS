@@ -14,6 +14,7 @@ import java.net.URLEncoder;
 
 @WebServlet("/pdf/*")
 public class PdfServlet extends BasicServlet {
+    private static final long serialVersionUID = 7426159798357329970L;
 
     public void read(HttpServletRequest req, HttpServletResponse resp) {
         int bid = Integer.parseInt(req.getParameter("bid"));
@@ -45,7 +46,7 @@ public class PdfServlet extends BasicServlet {
             BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream);
             OutputStream outputStream = resp.getOutputStream();
             byte[] buffer = new byte[1024];
-            int len = 0;
+            int len;
             while ((len = bufferedInputStream.read(buffer)) > 0) {
                 outputStream.write(buffer, 0, len);
             }

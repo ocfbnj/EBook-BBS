@@ -14,6 +14,8 @@ import java.io.IOException;
 
 @WebServlet("/bookServlet/*")
 public class BookServlet extends BasicServlet {
+    private static final long serialVersionUID = 1L;
+
     private final BookService bookService = new BookServiceImpl();
 
     //分页
