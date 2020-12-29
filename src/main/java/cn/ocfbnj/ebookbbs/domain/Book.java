@@ -8,7 +8,6 @@ public class Book {
     private String title;
     private String author;
     private String intro;
-    private Integer download;
     private BigDecimal price;
     private Integer userId;
     private Date issueTime;
@@ -46,14 +45,6 @@ public class Book {
 
     public void setIntro(String intro) {
         this.intro = intro;
-    }
-
-    public Integer getDownload() {
-        return download;
-    }
-
-    public void setDownload(Integer download) {
-        this.download = download;
     }
 
     public BigDecimal getPrice() {
@@ -111,7 +102,6 @@ public class Book {
                 ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", intro='" + intro + '\'' +
-                ", download=" + download +
                 ", price=" + price +
                 ", userId=" + userId +
                 ", issueTime=" + issueTime +
