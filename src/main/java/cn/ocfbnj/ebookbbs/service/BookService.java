@@ -9,7 +9,7 @@ public interface BookService {
 
     Page<Book> pageByPrice(int pageNo, int pageSize);
 
-    Page<Book> pageByDownload(int pageNo, int pageSize);
+    Page<Book> pageByClassify(String classify, int pageNo, int pageSize);
 
     Book getBook(int bid);
 }

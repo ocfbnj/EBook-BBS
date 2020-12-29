@@ -15,12 +15,14 @@ public class BookDaoImpl extends OutBaseDao implements BookDao {
         return count.intValue();
     }
 
+
     @Override
-    public Integer queryForPageTotalCountDownload() {
-        String sql = "select count(*) from ebook where classify = '计算机科学与技术'";
+    public Integer queryForPageTotalCountClassify(String classify) {
+        String sql = "select count(*) from ebook where classify = '" + classify + "'";
         Number count = (Number) queryForSingleValue(sql);
         return count.intValue();
     }
+
 
     //返回当前页显示的书籍信息，存放在List里，第一个问号表示从哪条记录开始，第二个问好表示每页的记录数
     //第一个问号是0，因为要从数据库表中读取，表的第一个是从0开始的
@@ -37,9 +39,8 @@ public class BookDaoImpl extends OutBaseDao implements BookDao {
         return queryForList(sql, Book.class, begin, pageSize);
     }
 
-    @Override
-    public List<Book> queryForPageItemsByDownload(int begin, int pageSize) {
-        String sql = "select * from ebook where classify = '计算机科学' limit ? ,?";
+    public List<Book> queryForPageItemsByClassify(String classify, int begin, int pageSize) {
+        String sql = "select * from ebook where classify = '" + classify + "' limit ? ,?";
         System.out.println(begin + ":" + pageSize);
         return queryForList(sql, Book.class, begin, pageSize);
     }

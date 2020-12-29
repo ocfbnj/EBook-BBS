@@ -53,6 +53,14 @@ public class EBookServlet extends BasicServlet {
     public void getBook(HttpServletRequest req, HttpServletResponse resp) {
         int bid = Integer.parseInt(req.getParameter("bid"));
         Book book = bookService.getBook(bid);
+        String url = "http://localhost:8080/";
+        String bookurl = book.getDownload_path();
+        if (bookurl == null) {
+            book.setDownload_path(url + "ebook_pdf/2.pdf");
+        } else
+            book.setDownload_path(url + bookurl);
+
+        req.getSession().setAttribute("ebook", book);
         try {
             writeValue(resp, book);
         } catch (IOException e) {
